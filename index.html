@@ -3,85 +3,1182 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="文林｜資金規劃與融資諮詢">
-<title>安心借｜借款・資金週轉｜線上諮詢</title>
-<meta name="keywords" content="借款,資金週轉,借錢,借款諮詢,汽機車資金,個人資金週轉,債務整合">
+<meta name="description" content="安心借｜文林資金規劃與借款諮詢。提供汽機車資金、個人資金週轉、債務整合及借款方案諮詢。">
+<meta name="keywords" content="借款,資金週轉,借錢,借款諮詢,汽機車借款,個人資金週轉,債務整合">
 <meta name="robots" content="index,follow">
+
+<title>安心借｜借款・資金週轉｜專業線上諮詢</title>
+
 <style>
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans TC",sans-serif;background:#08090b;color:#f4f1e8;line-height:1.7}
-:root{--gold:#d7b56d;--gold2:#f2d58f;--muted:#aaa69c;--card:#111317;--line:#292a2e}
-.container{width:min(1120px,92%);margin:auto}.nav{position:sticky;top:0;z-index:20;background:rgba(8,9,11,.82);backdrop-filter:blur(14px);border-bottom:1px solid #222}
-.navin{height:72px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;letter-spacing:3px;font-size:21px}.brand span{color:var(--gold)}
-.nav a{color:#ddd;text-decoration:none;margin-left:28px;font-size:14px}.nav a:hover{color:var(--gold)}
-.hero{min-height:680px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 25%,rgba(215,181,109,.16),transparent 35%),radial-gradient(circle at 10% 80%,rgba(215,181,109,.06),transparent 30%)}
-.hero:after{content:"";position:absolute;width:520px;height:520px;border:1px solid rgba(215,181,109,.13);border-radius:50%;right:-180px;top:70px;box-shadow:0 0 80px rgba(215,181,109,.05)}
-.kicker{color:var(--gold);letter-spacing:4px;font-size:13px}.hero h1{font-size:clamp(42px,7vw,76px);line-height:1.08;margin:18px 0}.hero h1 span{color:var(--gold)}.hero p{max-width:650px;color:var(--muted);font-size:18px}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{padding:13px 24px;border-radius:7px;text-decoration:none;font-weight:700;border:1px solid var(--gold);display:inline-block}.primary{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#15120b}.secondary{color:#eee;background:#111}
-section{padding:88px 0}.title{font-size:34px;margin:0 0 10px}.sub{color:var(--muted);margin:0 0 35px}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:linear-gradient(145deg,#15171b,#0e0f12);border:1px solid var(--line);padding:25px;border-radius:12px}.card .num{color:var(--gold);font-size:13px;letter-spacing:2px}.card h3{margin:8px 0}.card p{color:var(--muted);font-size:14px}
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.step{border-top:1px solid var(--gold);padding-top:20px}.step b{font-size:28px;color:var(--gold)}.step p{color:var(--muted)}
-.formbox{display:grid;grid-template-columns:1fr 1fr;gap:28px;background:#101114;border:1px solid var(--line);border-radius:16px;padding:34px}.formbox label{display:block;font-size:14px;color:#ccc;margin-bottom:7px}.formbox input,.formbox select,.formbox textarea{width:100%;padding:13px;border-radius:7px;border:1px solid #303238;background:#08090b;color:#fff;outline:none}.formbox textarea{min-height:130px;resize:vertical}.full{grid-column:1/-1}.notice{font-size:12px;color:#85827a}.footer{padding:35px 0;border-top:1px solid #222;color:#777;font-size:13px}.contact{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
-@media(max-width:800px){.nav a{display:none}.grid,.process{grid-template-columns:1fr 1fr}.formbox{grid-template-columns:1fr}.full{grid-column:auto}.hero{min-height:600px}}
-@media(max-width:520px){section{padding:65px 0}.grid,.process{grid-template-columns:1fr}.hero h1{font-size:44px}.hero p{font-size:16px}.formbox{padding:22px}}
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,"Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:#08090b;
+  color:#f4f1e8;
+  line-height:1.7;
+}
+
+:root{
+  --gold:#d7b56d;
+  --gold2:#f3d892;
+  --dark:#08090b;
+  --card:#111317;
+  --card2:#16181d;
+  --muted:#aaa69c;
+  --line:#292c32;
+  --green:#3bd671;
+}
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+/* 導覽列 */
+
+.nav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(8,9,11,.92);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #24262b;
+}
+
+.navin{
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{
+  font-weight:900;
+  letter-spacing:2px;
+  font-size:21px;
+}
+
+.brand span{
+  color:var(--gold);
+}
+
+.navlinks{
+  display:flex;
+  align-items:center;
+}
+
+.navlinks a{
+  color:#ddd;
+  text-decoration:none;
+  margin-left:26px;
+  font-size:14px;
+  transition:.2s;
+}
+
+.navlinks a:hover{
+  color:var(--gold);
+}
+
+/* HERO */
+
+.hero{
+  min-height:720px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+  background:
+  radial-gradient(circle at 85% 25%,rgba(215,181,109,.18),transparent 32%),
+  radial-gradient(circle at 5% 90%,rgba(215,181,109,.08),transparent 30%);
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:550px;
+  height:550px;
+  border:1px solid rgba(215,181,109,.13);
+  border-radius:50%;
+  right:-190px;
+  top:60px;
+  box-shadow:0 0 100px rgba(215,181,109,.05);
+}
+
+.kicker{
+  color:var(--gold);
+  letter-spacing:4px;
+  font-size:13px;
+  font-weight:700;
+}
+
+.hero h1{
+  font-size:clamp(43px,7vw,76px);
+  line-height:1.08;
+  margin:18px 0;
+  max-width:850px;
+}
+
+.hero h1 span{
+  color:var(--gold);
+}
+
+.hero p{
+  max-width:680px;
+  color:var(--muted);
+  font-size:18px;
+}
+
+.hero-trust{
+  display:flex;
+  gap:22px;
+  flex-wrap:wrap;
+  margin-top:25px;
+  color:#ccc;
+  font-size:14px;
+}
+
+.hero-trust span:before{
+  content:"✓";
+  color:var(--gold);
+  margin-right:7px;
+}
+
+.btns{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:32px;
+}
+
+.btn{
+  padding:14px 25px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:800;
+  border:1px solid var(--gold);
+  display:inline-block;
+  cursor:pointer;
+  font-size:15px;
+  transition:.25s;
+}
+
+.btn:hover{
+  transform:translateY(-2px);
+}
+
+.primary{
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
+  color:#15120b;
+  box-shadow:0 8px 30px rgba(215,181,109,.13);
+}
+
+.secondary{
+  color:#eee;
+  background:#111317;
+}
+
+/* 信任數據 */
+
+.trustbar{
+  border-top:1px solid #202228;
+  border-bottom:1px solid #202228;
+  background:#0c0d10;
+}
+
+.trustgrid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+
+.trustitem{
+  padding:28px 18px;
+  text-align:center;
+  border-right:1px solid #202228;
+}
+
+.trustitem:last-child{
+  border-right:0;
+}
+
+.trustitem strong{
+  display:block;
+  color:var(--gold);
+  font-size:22px;
+}
+
+.trustitem span{
+  color:#999;
+  font-size:13px;
+}
+
+/* 通用 */
+
+section{
+  padding:90px 0;
+}
+
+.section-dark{
+  background:#0b0c0f;
+}
+
+.title{
+  font-size:36px;
+  margin:0 0 8px;
+}
+
+.sub{
+  color:var(--muted);
+  margin:0 0 38px;
+  max-width:700px;
+}
+
+/* 服務 */
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+
+.card{
+  background:linear-gradient(145deg,#16181d,#0e0f12);
+  border:1px solid var(--line);
+  padding:27px;
+  border-radius:14px;
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(215,181,109,.45);
+}
+
+.icon{
+  width:46px;
+  height:46px;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(215,181,109,.10);
+  color:var(--gold);
+  font-size:21px;
+  margin-bottom:18px;
+}
+
+.card .num{
+  color:var(--gold);
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.card h3{
+  margin:7px 0 8px;
+}
+
+.card p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:0;
+}
+
+/* 為什麼選擇 */
+
+.why{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.whybox{
+  background:
+  radial-gradient(circle at 50% 30%,rgba(215,181,109,.12),transparent 45%),
+  #101216;
+  border:1px solid var(--line);
+  min-height:430px;
+  border-radius:18px;
+  padding:35px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.whylogo{
+  color:var(--gold);
+  font-size:14px;
+  letter-spacing:4px;
+}
+
+.whybig{
+  font-size:42px;
+  line-height:1.25;
+  font-weight:900;
+  margin:15px 0;
+}
+
+.whybig span{
+  color:var(--gold);
+}
+
+.checklist{
+  display:grid;
+  gap:15px;
+}
+
+.check{
+  display:flex;
+  gap:13px;
+  padding:15px 0;
+  border-bottom:1px solid #24262b;
+}
+
+.checkmark{
+  color:var(--gold);
+  font-weight:bold;
+}
+
+.check b{
+  display:block;
+}
+
+.check small{
+  color:var(--muted);
+}
+
+/* 流程 */
+
+.process{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:18px;
+}
+
+.step{
+  border-top:2px solid var(--gold);
+  padding:22px 8px 0 0;
+}
+
+.step b{
+  font-size:30px;
+  color:var(--gold);
+}
+
+.step h3{
+  margin:8px 0;
+}
+
+.step p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:850px;
+}
+
+details{
+  border-bottom:1px solid #292b30;
+  padding:20px 0;
+}
+
+summary{
+  cursor:pointer;
+  font-weight:700;
+  font-size:17px;
+  list-style:none;
+}
+
+summary::-webkit-details-marker{
+  display:none;
+}
+
+summary:after{
+  content:"+";
+  float:right;
+  color:var(--gold);
+  font-size:24px;
+}
+
+details[open] summary:after{
+  content:"−";
+}
+
+details p{
+  color:var(--muted);
+  font-size:14px;
+  padding-right:35px;
+}
+
+/* 表單 */
+
+.formwrap{
+  background:
+  radial-gradient(circle at 90% 0%,rgba(215,181,109,.10),transparent 30%),
+  #0f1114;
+  border:1px solid var(--line);
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.formhead{
+  padding:32px 34px 0;
+}
+
+.formbox{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:23px;
+  padding:30px 34px 35px;
+}
+
+.formbox label{
+  display:block;
+  font-size:14px;
+  color:#ccc;
+  margin-bottom:7px;
+}
+
+.formbox input,
+.formbox select,
+.formbox textarea{
+  width:100%;
+  padding:14px;
+  border-radius:8px;
+  border:1px solid #303238;
+  background:#08090b;
+  color:#fff;
+  outline:none;
+  font-size:15px;
+}
+
+.formbox input:focus,
+.formbox select:focus,
+.formbox textarea:focus{
+  border-color:var(--gold);
+}
+
+.formbox textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.full{
+  grid-column:1/-1;
+}
+
+.notice{
+  font-size:12px;
+  color:#85827a;
+}
+
+.contact{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+/* 提醒區 */
+
+.warning{
+  border:1px solid #33353a;
+  border-left:3px solid var(--gold);
+  background:#101216;
+  padding:22px;
+  border-radius:8px;
+  margin-top:35px;
+}
+
+.warning strong{
+  color:var(--gold);
+}
+
+.warning p{
+  color:#999;
+  margin:5px 0 0;
+  font-size:13px;
+}
+
+/* LINE 浮動按鈕 */
+
+.linefloat{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  z-index:99;
+  background:#06c755;
+  color:white;
+  text-decoration:none;
+  font-weight:800;
+  padding:14px 18px;
+  border-radius:50px;
+  box-shadow:0 8px 30px rgba(0,0,0,.4);
+}
+
+/* Footer */
+
+.footer{
+  padding:45px 0 90px;
+  border-top:1px solid #222;
+  color:#777;
+  font-size:13px;
+}
+
+.footergrid{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.footer strong{
+  color:#ccc;
+}
+
+/* 手機 */
+
+@media(max-width:850px){
+
+  .navlinks a{
+    display:none;
+  }
+
+  .grid,
+  .process,
+  .trustgrid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .why{
+    grid-template-columns:1fr;
+  }
+
+  .formbox{
+    grid-template-columns:1fr;
+  }
+
+  .full{
+    grid-column:auto;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+}
+
+@media(max-width:520px){
+
+  section{
+    padding:65px 0;
+  }
+
+  .grid,
+  .process{
+    grid-template-columns:1fr;
+  }
+
+  .hero h1{
+    font-size:43px;
+  }
+
+  .hero p{
+    font-size:16px;
+  }
+
+  .trustitem{
+    padding:20px 8px;
+  }
+
+  .trustitem strong{
+    font-size:18px;
+  }
+
+  .formbox{
+    padding:22px;
+  }
+
+  .formhead{
+    padding:25px 22px 0;
+  }
+
+  .whybig{
+    font-size:34px;
+  }
+
+  .title{
+    font-size:31px;
+  }
+}
 </style>
 </head>
+
 <body>
-<header class="nav"><div class="container navin">
-<div class="brand">安心借<span>．借款・資金週轉</span></div>
-<nav><a href="#services">服務</a><a href="#process">流程</a><a href="#apply">線上諮詢</a></nav>
-</div></header>
+
+<header class="nav">
+<div class="container navin">
+
+<div class="brand">
+安心借<span>．資金規劃</span>
+</div>
+
+<nav class="navlinks">
+<a href="#services">服務項目</a>
+<a href="#why">安心借優勢</a>
+<a href="#process">申請流程</a>
+<a href="#faq">常見問題</a>
+<a href="#apply">免費諮詢</a>
+</nav>
+
+</div>
+</header>
+
 
 <main>
-<section class="hero"><div class="container">
-<div class="kicker">LOAN & FUNDING CONSULTING</div>
-<h1>借款．資金週轉<br><span>專業．透明．安心</span></h1>
-<p>提供借款、個人資金週轉與融資諮詢，依照您的實際條件協助了解可行方案。先諮詢、再評估，不盲目承諾。</p>
-<div class="btns"><a class="btn primary" href="#apply">立即諮詢</a><a class="btn secondary" href="https://line.me/ti/p/~xd5567" target="_blank" rel="noopener">LINE：xd5567</a></div>
-</div></section>
 
-<section id="services"><div class="container">
-<h2 class="title">服務項目</h2><p class="sub">依個人條件進行需求了解與方案評估</p>
-<div class="grid">
-<div class="card"><div class="num">01</div><h3>汽機車資金方案</h3><p>依車況、持有狀況與個人條件進行諮詢評估。</p></div>
-<div class="card"><div class="num">02</div><h3>個人資金週轉</h3><p>了解資金需求與還款能力，協助尋找適合方向。</p></div>
-<div class="card"><div class="num">03</div><h3>債務整合諮詢</h3><p>整理現有負債與每月負擔，評估可行的規劃方式。</p></div>
-<div class="card"><div class="num">04</div><h3>雙證件方案諮詢</h3><p>先了解基本條件，再依實際情況進一步評估。</p></div>
-</div></div></section>
+<!-- 首頁 -->
 
-<section id="process"><div class="container">
-<h2 class="title">簡單四步驟</h2><p class="sub">流程清楚，先了解再決定</p>
-<div class="process">
-<div class="step"><b>01</b><h3>提出需求</h3><p>告訴我們您的資金用途與需求。</p></div>
-<div class="step"><b>02</b><h3>條件了解</h3><p>了解工作、收入與目前負債等基本資訊。</p></div>
-<div class="step"><b>03</b><h3>方案評估</h3><p>依實際條件說明可能的方案與費用。</p></div>
-<div class="step"><b>04</b><h3>確認辦理</h3><p>充分了解條件後，再決定是否進一步辦理。</p></div>
-</div></div></section>
+<section class="hero">
+<div class="container">
 
-<section id="apply"><div class="container">
-<h2 class="title">線上諮詢</h2><p class="sub">留下基本資料，我們會依您提供的資訊與您聯繫。</p>
-<form class="formbox" action="https://formsubmit.co/qwe0916227109@gmail.com" method="POST">
-<input type="hidden" name="_subject" value="【安心借】新的網站資金諮詢">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_captcha" value="true">
-<input type="text" name="_honey" style="display:none">
-<div><label>姓名</label><input id="name" name="姓名" required placeholder="請輸入姓名"></div>
-<div><label>聯絡電話</label><input id="phone" name="聯絡電話" required inputmode="tel" placeholder="請輸入電話"></div>
-<div><label>需求金額</label><select id="amount" name="需求金額"><option>尚未確定</option><option>1萬～5萬元</option><option>5萬～10萬元</option><option>10萬～30萬元</option><option>30萬元以上</option></select></div>
-<div><label>目前職業</label><input id="job" name="目前職業" placeholder="例如：上班族／自營／勞工"></div>
-<div class="full"><label>需求說明</label><textarea id="msg" name="需求說明" placeholder="簡單說明資金需求即可"></textarea></div>
-<div class="full">
-<label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer">
-<input type="checkbox" name="個資蒐集同意" value="已同意" required style="width:auto;margin-top:7px">
-<span class="notice">我已閱讀並同意安心借為提供本次諮詢與聯絡目的，蒐集我於本表單填寫之姓名、電話及需求資料。</span>
-</label>
-<button class="btn primary" type="submit" style="margin-top:18px">送出諮詢</button>
-<p class="notice">※ 本頁僅提供諮詢與資訊整理，實際是否核准、額度、利率及費用均依個案條件與正式審核結果為準。</p>
+<div class="kicker">
+PROFESSIONAL FUNDING CONSULTING
 </div>
+
+<h1>
+資金需要規劃<br>
+更需要<span>值得信任的服務</span>
+</h1>
+
+<p>
+安心借提供借款與資金週轉諮詢服務。
+從需求了解、條件評估到方案說明，
+以清楚、透明的方式協助您了解適合自己的資金方向。
+</p>
+
+<div class="hero-trust">
+<span>線上快速諮詢</span>
+<span>專人一對一服務</span>
+<span>方案清楚說明</span>
+<span>個資謹慎處理</span>
+</div>
+
+<div class="btns">
+
+<a class="btn primary" href="#apply">
+立即免費諮詢
+</a>
+
+<a class="btn secondary"
+href="https://line.me/ti/p/~xd5567"
+target="_blank"
+rel="noopener">
+LINE：xd5567
+</a>
+
+</div>
+</div>
+</section>
+
+
+<!-- 信任區 -->
+
+<div class="trustbar">
+<div class="container trustgrid">
+
+<div class="trustitem">
+<strong>01</strong>
+<span>需求了解</span>
+</div>
+
+<div class="trustitem">
+<strong>02</strong>
+<span>條件評估</span>
+</div>
+
+<div class="trustitem">
+<strong>03</strong>
+<span>方案說明</span>
+</div>
+
+<div class="trustitem">
+<strong>04</strong>
+<span>確認辦理</span>
+</div>
+
+</div>
+</div>
+
+
+<!-- 服務 -->
+
+<section id="services">
+<div class="container">
+
+<h2 class="title">資金諮詢服務</h2>
+
+<p class="sub">
+每個人的工作、收入、資金用途與負債狀況都不同，
+我們會先了解您的實際需求，再協助評估適合的方向。
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">車</div>
+<div class="num">SERVICE 01</div>
+<h3>汽機車資金方案</h3>
+<p>
+依汽機車持有狀況、車況及個人條件進行資金需求評估與諮詢。
+</p>
+</div>
+
+<div class="card">
+<div class="icon">資</div>
+<div class="num">SERVICE 02</div>
+<h3>個人資金週轉</h3>
+<p>
+針對短期資金需求，了解收入及還款能力後協助評估可行方向。
+</p>
+</div>
+
+<div class="card">
+<div class="icon">整</div>
+<div class="num">SERVICE 03</div>
+<h3>債務整合諮詢</h3>
+<p>
+協助整理目前每月支出與負債狀況，了解是否有更合適的規劃方向。
+</p>
+</div>
+
+<div class="card">
+<div class="icon">證</div>
+<div class="num">SERVICE 04</div>
+<h3>雙證件方案諮詢</h3>
+<p>
+提供基本條件諮詢，實際方案依個人條件及正式審核結果說明。
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- 為什麼選擇 -->
+
+<section class="section-dark" id="why">
+<div class="container why">
+
+<div class="whybox">
+
+<div class="whylogo">
+ANXIN FUNDING
+</div>
+
+<div class="whybig">
+不只是借款<br>
+更重視<span>資金規劃</span>
+</div>
+
+<p class="sub" style="margin:0">
+先了解需求，再評估方案。
+不以誇大承諾取代真正的條件說明。
+</p>
+
+</div>
+
+
+<div>
+
+<h2 class="title">
+為什麼選擇安心借？
+</h2>
+
+<div class="checklist">
+
+<div class="check">
+<div class="checkmark">✓</div>
+<div>
+<b>一對一需求了解</b>
+<small>先了解您的資金用途與實際需求，再進一步討論。</small>
+</div>
+</div>
+
+<div class="check">
+<div class="checkmark">✓</div>
+<div>
+<b>方案與費用清楚說明</b>
+<small>在決定辦理之前，先了解相關條件與費用內容。</small>
+</div>
+</div>
+
+<div class="check">
+<div class="checkmark">✓</div>
+<div>
+<b>依實際條件進行評估</b>
+<small>不以「保證核准」作為招攬方式，實際結果依正式審核為準。</small>
+</div>
+</div>
+
+<div class="check">
+<div class="checkmark">✓</div>
+<div>
+<b>重視個人資料</b>
+<small>您提供的資料僅用於本次諮詢、聯絡與方案評估。</small>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- 流程 -->
+
+<section id="process">
+<div class="container">
+
+<h2 class="title">諮詢流程</h2>
+
+<p class="sub">
+不用急著決定，先了解自己的條件與可能方案。
+</p>
+
+<div class="process">
+
+<div class="step">
+<b>01</b>
+<h3>提出需求</h3>
+<p>
+告訴我們預計需要的金額與資金用途。
+</p>
+</div>
+
+<div class="step">
+<b>02</b>
+<h3>了解條件</h3>
+<p>
+了解職業、收入、負債與相關基本資訊。
+</p>
+</div>
+
+<div class="step">
+<b>03</b>
+<h3>方案評估</h3>
+<p>
+依照實際條件評估可能的資金方案與相關內容。
+</p>
+</div>
+
+<div class="step">
+<b>04</b>
+<h3>確認辦理</h3>
+<p>
+充分了解條件後，由您自行決定是否進一步辦理。
+</p>
+</div>
+
+</div>
+</div>
+</section>
+
+
+<!-- FAQ -->
+
+<section class="section-dark" id="faq">
+<div class="container">
+
+<h2 class="title">常見問題</h2>
+
+<p class="sub">
+第一次詢問借款方案，可以先看看以下常見問題。
+</p>
+
+<div class="faq">
+
+<details>
+<summary>只是先詢問，也一定要辦理嗎？</summary>
+<p>
+不用。您可以先提供基本需求進行諮詢，了解相關條件後，再自行決定是否辦理。
+</p>
+</details>
+
+<details>
+<summary>可以直接知道自己能借多少嗎？</summary>
+<p>
+實際額度通常會依工作、收入、負債、信用狀況、擔保品條件及各方案審核結果而有所不同，因此需先了解基本資料。
+</p>
+</details>
+
+<details>
+<summary>沒有汽車或機車也可以詢問嗎？</summary>
+<p>
+可以。除了汽機車相關資金需求之外，也可以先詢問其他個人資金週轉方向。
+</p>
+</details>
+
+<details>
+<summary>詢問後多久會有人聯絡？</summary>
+<p>
+您可以直接透過 LINE 聯繫，或填寫下方線上表單。我們看到資料後會再與您聯繫。
+</p>
+</details>
+
+<details>
+<summary>網站上的諮詢代表一定會核准嗎？</summary>
+<p>
+不代表。網站提供的是初步需求了解與諮詢服務，實際核准與否、額度、利率、期數及相關費用，均依個案條件與正式審核結果為準。
+</p>
+</details>
+
+</div>
+</div>
+</section>
+
+
+<!-- 表單 -->
+
+<section id="apply">
+<div class="container">
+
+<div class="formwrap">
+
+<div class="formhead">
+
+<div class="kicker">
+ONLINE CONSULTATION
+</div>
+
+<h2 class="title">
+線上資金諮詢
+</h2>
+
+<p class="sub" style="margin-bottom:0">
+填寫基本資料即可，不需要在網站留下過度詳細的個人資訊。
+</p>
+
+</div>
+
+
+<form class="formbox"
+action="https://formsubmit.co/qwe0916227109@gmail.com"
+method="POST">
+
+<input type="hidden"
+name="_subject"
+value="【安心借】新的網站資金諮詢">
+
+<input type="hidden"
+name="_template"
+value="table">
+
+<input type="hidden"
+name="_captcha"
+value="true">
+
+<input type="text"
+name="_honey"
+style="display:none">
+
+
+<div>
+<label>姓名</label>
+
+<input
+name="姓名"
+required
+autocomplete="name"
+placeholder="請輸入姓名">
+</div>
+
+
+<div>
+<label>聯絡電話</label>
+
+<input
+name="聯絡電話"
+required
+inputmode="tel"
+autocomplete="tel"
+placeholder="例如：09xxxxxxxx">
+</div>
+
+
+<div>
+<label>需求金額</label>
+
+<select name="需求金額">
+
+<option>尚未確定</option>
+<option>1萬～5萬元</option>
+<option>5萬～10萬元</option>
+<option>10萬～30萬元</option>
+<option>30萬～50萬元</option>
+<option>50萬元以上</option>
+
+</select>
+</div>
+
+
+<div>
+<label>目前職業</label>
+
+<input
+name="目前職業"
+placeholder="例如：上班族／自營／勞工">
+</div>
+
+
+<div>
+<label>方便聯絡時間</label>
+
+<select name="方便聯絡時間">
+
+<option>皆可</option>
+<option>上午</option>
+<option>下午</option>
+<option>晚上</option>
+
+</select>
+</div>
+
+
+<div>
+<label>主要需求</label>
+
+<select name="主要需求">
+
+<option>資金週轉</option>
+<option>汽機車資金</option>
+<option>債務整合</option>
+<option>雙證件方案</option>
+<option>其他</option>
+
+</select>
+</div>
+
+
+<div class="full">
+
+<label>需求說明</label>
+
+<textarea
+name="需求說明"
+placeholder="例如：預計需要10萬元，希望先了解每月還款方式與相關條件。"></textarea>
+
+</div>
+
+
+<div class="full">
+
+<label style="display:flex;gap:10px;align-items:flex-start;cursor:pointer">
+
+<input
+type="checkbox"
+name="個資蒐集同意"
+value="已同意"
+required
+style="width:auto;margin-top:7px">
+
+<span class="notice">
+我同意安心借為提供本次諮詢、聯絡與需求評估之目的，蒐集並使用我於本表單所填寫之姓名、電話、職業與需求資訊。
+</span>
+
+</label>
+
+
+<button
+class="btn primary"
+type="submit"
+style="margin-top:20px">
+送出免費諮詢
+</button>
+
+
+<p class="notice">
+※ 本網站提供資金需求諮詢與資訊整理。實際核准與否、額度、利率、期數及相關費用，均依個案條件、契約內容及正式審核結果為準。借款前請確認自身還款能力並充分了解相關費用。
+</p>
+
+</div>
+
 </form>
-<div class="contact"><a class="btn primary" href="https://line.me/ti/p/~xd5567" target="_blank" rel="noopener">LINE：xd5567</a><a class="btn secondary" href="#apply">回到表單</a></div>
-</div></section>
+</div>
+
+
+<div class="warning">
+
+<strong>借款前請先評估還款能力</strong>
+
+<p>
+資金週轉應以自身收入及可負擔範圍為原則。辦理任何借款前，請確認利率、期數、總費用、違約條款與每月應繳金額。
+</p>
+
+</div>
+
+
+<div class="contact">
+
+<a
+class="btn primary"
+href="https://line.me/ti/p/~xd5567"
+target="_blank"
+rel="noopener">
+LINE 免費諮詢：xd5567
+</a>
+
+<a
+class="btn secondary"
+href="#services">
+查看服務項目
+</a>
+
+</div>
+
+</div>
+</section>
+
 </main>
 
-<footer class="footer"><div class="container">© 2026 安心借｜借款・資金週轉　｜　諮詢 LINE：xd5567</div></footer>
+
+<footer class="footer">
+
+<div class="container footergrid">
+
+<div>
+<strong>安心借｜資金規劃與借款諮詢</strong><br>
+專人一對一了解您的資金需求
+</div>
+
+<div>
+諮詢 LINE：xd5567<br>
+© 2026 安心借
+</div>
+
+</div>
+
+</footer>
+
+
+<a
+class="linefloat"
+href="https://line.me/ti/p/~xd5567"
+target="_blank"
+rel="noopener">
+LINE 諮詢
+</a>
 
 </body>
 </html>
