@@ -6,14 +6,11 @@
 
 <title>安心借｜借款・資金週轉｜專業線上諮詢</title>
 
-<meta name="description" content="安心借提供借款、資金週轉、汽機車資金與雙證件方案諮詢。先了解需求、再評估方向，方案與費用清楚說明。">
-
-<meta name="keywords" content="安心借,借款,資金週轉,借錢,汽車借款,機車借款,雙證件借款,借款諮詢">
-
+<meta name="description" content="安心借提供汽車、機車、雙證件、個人資金週轉與債務整合諮詢。先了解需求與條件，再評估適合方向。">
+<meta name="keywords" content="安心借,借款,資金週轉,汽車借款,機車借款,雙證件借款,債務整合,借款諮詢">
 <meta name="robots" content="index,follow">
 
 <style>
-
 *{
   box-sizing:border-box;
 }
@@ -32,7 +29,7 @@ body{
 
 :root{
   --gold:#d7b56d;
-  --gold2:#f4d998;
+  --gold2:#f2d58f;
   --muted:#aaa69c;
   --card:#111317;
   --line:#292c32;
@@ -49,14 +46,14 @@ body{
 .nav{
   position:sticky;
   top:0;
-  z-index:50;
-  background:rgba(8,9,11,.93);
+  z-index:100;
+  background:rgba(8,9,11,.94);
   backdrop-filter:blur(14px);
   border-bottom:1px solid #222;
 }
 
 .navin{
-  height:68px;
+  min-height:68px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -75,34 +72,19 @@ body{
 .nav a{
   color:#ddd;
   text-decoration:none;
-  margin-left:24px;
+  margin-left:22px;
   font-size:14px;
-}
-
-.nav a:hover{
-  color:var(--gold);
 }
 
 /* 首頁 */
 
 .hero{
-  min-height:590px;
+  min-height:580px;
   display:flex;
   align-items:center;
-  position:relative;
-  overflow:hidden;
-
   background:
-  radial-gradient(
-    circle at 82% 22%,
-    rgba(215,181,109,.16),
-    transparent 34%
-  ),
-  radial-gradient(
-    circle at 8% 85%,
-    rgba(215,181,109,.07),
-    transparent 28%
-  );
+  radial-gradient(circle at 82% 20%,rgba(215,181,109,.17),transparent 34%),
+  radial-gradient(circle at 7% 88%,rgba(215,181,109,.07),transparent 30%);
 }
 
 .kicker{
@@ -127,28 +109,23 @@ body{
   max-width:700px;
   color:var(--muted);
   font-size:17px;
-  margin-bottom:0;
 }
-
-/* 標籤 */
 
 .badges{
   display:flex;
-  gap:10px;
+  gap:9px;
   flex-wrap:wrap;
-  margin-top:22px;
+  margin-top:20px;
 }
 
 .badge{
   border:1px solid #303238;
   background:#101114;
-  padding:7px 12px;
-  border-radius:50px;
+  padding:7px 11px;
+  border-radius:40px;
   color:#ccc;
   font-size:12px;
 }
-
-/* 按鈕 */
 
 .btns{
   display:flex;
@@ -168,11 +145,7 @@ body{
 }
 
 .primary{
-  background:linear-gradient(
-    135deg,
-    var(--gold2),
-    var(--gold)
-  );
+  background:linear-gradient(135deg,var(--gold2),var(--gold));
   color:#16120a;
 }
 
@@ -181,44 +154,10 @@ body{
   color:#eee;
 }
 
-/* 四步驟快速顯示 */
-
-.quickbar{
-  background:#0d0f12;
-  border-top:1px solid #202228;
-  border-bottom:1px solid #202228;
-}
-
-.quickgrid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-}
-
-.quickitem{
-  text-align:center;
-  padding:22px 12px;
-  border-right:1px solid #202228;
-}
-
-.quickitem:last-child{
-  border-right:0;
-}
-
-.quickitem b{
-  display:block;
-  color:var(--gold);
-  font-size:20px;
-}
-
-.quickitem span{
-  font-size:12px;
-  color:#999;
-}
-
-/* 區塊 */
+/* 通用區塊 */
 
 section{
-  padding:78px 0;
+  padding:76px 0;
 }
 
 .section-dark{
@@ -232,47 +171,73 @@ section{
 
 .sub{
   color:var(--muted);
-  margin:0 0 34px;
+  margin:0 0 32px;
   max-width:760px;
 }
 
-/* 服務 */
+/* 服務圖片卡 */
 
-.grid{
+.service-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:16px;
+  grid-template-columns:repeat(2,1fr);
+  gap:20px;
 }
 
-.card{
-  background:linear-gradient(
-    145deg,
-    #16181d,
-    #0e0f12
-  );
-
+.service-card{
+  overflow:hidden;
   border:1px solid var(--line);
-  padding:24px;
-  border-radius:14px;
+  border-radius:18px;
+  background:linear-gradient(145deg,#16181d,#0d0f12);
 }
 
-.card h3{
-  margin:8px 0;
+.visual{
+  height:220px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+  radial-gradient(circle at 50% 35%,rgba(215,181,109,.17),transparent 42%),
+  linear-gradient(145deg,#17191e,#090a0c);
+  border-bottom:1px solid #26282d;
 }
 
-.card p{
-  font-size:14px;
-  color:var(--muted);
-  margin:0;
+.visual svg{
+  width:75%;
+  height:75%;
+  filter:drop-shadow(0 15px 18px rgba(0,0,0,.45));
 }
 
-.num{
+.service-content{
+  padding:25px;
+}
+
+.service-num{
   color:var(--gold);
   font-size:12px;
   letter-spacing:2px;
 }
 
-/* 為什麼選擇我們 */
+.service-content h3{
+  font-size:24px;
+  margin:6px 0 9px;
+}
+
+.service-content p{
+  color:var(--muted);
+  font-size:14px;
+  margin:0;
+}
+
+.service-link{
+  display:inline-block;
+  color:var(--gold);
+  text-decoration:none;
+  font-weight:800;
+  margin-top:16px;
+}
+
+/* 優勢 */
 
 .whygrid{
   display:grid;
@@ -283,13 +248,13 @@ section{
 .whybox{
   background:#111317;
   border:1px solid var(--line);
-  padding:24px;
+  padding:23px;
   border-radius:12px;
 }
 
 .whybox b{
   display:block;
-  margin-bottom:6px;
+  margin-bottom:5px;
 }
 
 .whybox p{
@@ -330,12 +295,11 @@ section{
 .calcwrap{
   display:grid;
   grid-template-columns:1.1fr .9fr;
-  gap:24px;
-  align-items:start;
+  gap:22px;
 }
 
 .calc,
-.resultbox{
+.result{
   background:#101216;
   border:1px solid var(--line);
   border-radius:14px;
@@ -345,10 +309,11 @@ section{
 .calcgrid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:16px;
+  gap:15px;
 }
 
-.calc label{
+.calc label,
+.form label{
   display:block;
   font-size:13px;
   color:#ccc;
@@ -356,7 +321,10 @@ section{
 }
 
 .calc input,
-.calc select{
+.calc select,
+.form input,
+.form select,
+.form textarea{
   width:100%;
   padding:13px;
   border-radius:8px;
@@ -379,11 +347,8 @@ section{
 
 /* FAQ */
 
-.faq{
-  max-width:860px;
-}
-
 details{
+  max-width:860px;
   border-bottom:1px solid #292b30;
   padding:18px 0;
 }
@@ -404,34 +369,16 @@ details p{
   background:#101114;
   border:1px solid var(--line);
   border-radius:16px;
-  padding:30px;
+  padding:28px;
 }
 
-.formbox{
+.form{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:20px;
+  gap:19px;
 }
 
-.formbox label{
-  display:block;
-  font-size:14px;
-  color:#ccc;
-  margin-bottom:6px;
-}
-
-.formbox input,
-.formbox select,
-.formbox textarea{
-  width:100%;
-  padding:13px;
-  border-radius:8px;
-  border:1px solid #303238;
-  background:#08090b;
-  color:#fff;
-}
-
-.formbox textarea{
+.form textarea{
   min-height:120px;
 }
 
@@ -439,13 +386,11 @@ details p{
   grid-column:1/-1;
 }
 
-/* 提醒 */
-
 .warning{
-  margin-top:24px;
+  margin-top:22px;
   border-left:3px solid var(--gold);
   background:#101216;
-  padding:18px 20px;
+  padding:17px 20px;
   border-radius:8px;
 }
 
@@ -455,7 +400,7 @@ details p{
   font-size:13px;
 }
 
-/* 頁尾 */
+/* Footer */
 
 .footer{
   padding:40px 0 90px;
@@ -464,15 +409,13 @@ details p{
   font-size:13px;
 }
 
-/* LINE 浮動按鈕 */
-
 .linefloat{
   position:fixed;
-  right:18px;
-  bottom:18px;
+  right:16px;
+  bottom:16px;
   z-index:100;
   background:var(--green);
-  color:white;
+  color:#fff;
   text-decoration:none;
   font-weight:900;
   padding:14px 18px;
@@ -480,18 +423,16 @@ details p{
   box-shadow:0 8px 30px rgba(0,0,0,.45);
 }
 
-/* 手機 */
+/* 手機版 */
 
-@media(max-width:850px){
+@media(max-width:800px){
 
   .nav nav{
     display:none;
   }
 
-  .grid,
   .whygrid,
-  .process,
-  .quickgrid{
+  .process{
     grid-template-columns:1fr 1fr;
   }
 
@@ -499,29 +440,23 @@ details p{
     grid-template-columns:1fr;
   }
 
-  .formbox{
+  .form{
     grid-template-columns:1fr;
   }
 
   .full{
     grid-column:auto;
   }
-
-  .hero{
-    min-height:560px;
-  }
 }
 
-@media(max-width:520px){
+@media(max-width:560px){
 
   section{
-    padding:60px 0;
+    padding:58px 0;
   }
 
-  .grid,
-  .whygrid,
-  .process{
-    grid-template-columns:1fr;
+  .hero{
+    min-height:550px;
   }
 
   .hero h1{
@@ -532,12 +467,14 @@ details p{
     font-size:15px;
   }
 
-  .quickitem{
-    padding:18px 6px;
+  .service-grid,
+  .whygrid,
+  .process{
+    grid-template-columns:1fr;
   }
 
-  .quickitem b{
-    font-size:17px;
+  .visual{
+    height:205px;
   }
 
   .calcgrid{
@@ -545,12 +482,7 @@ details p{
   }
 
   .formwrap{
-    padding:22px;
-  }
-
-  .linefloat{
-    right:14px;
-    bottom:14px;
+    padding:20px;
   }
 }
 
@@ -560,7 +492,6 @@ details p{
 <body>
 
 <header class="nav">
-
 <div class="container navin">
 
 <div class="brand">
@@ -569,14 +500,12 @@ details p{
 
 <nav>
 <a href="#services">服務</a>
-<a href="#why">安心借優勢</a>
 <a href="#calc">試算</a>
 <a href="#faq">FAQ</a>
 <a href="#apply">免費諮詢</a>
 </nav>
 
 </div>
-
 </header>
 
 
@@ -585,7 +514,6 @@ details p{
 <!-- 首頁 -->
 
 <section class="hero">
-
 <div class="container">
 
 <div class="kicker">
@@ -598,30 +526,15 @@ PROFESSIONAL FUNDING CONSULTING
 </h1>
 
 <p>
-安心借提供借款與資金週轉諮詢。
-從需求了解、條件評估到方案說明，
-協助您先掌握可能方向，
-再決定是否進一步辦理。
+安心借提供汽機車、雙證件、個人資金週轉與債務整合諮詢。
+先了解您的需求與基本條件，再協助評估適合的方向。
 </p>
 
 <div class="badges">
-
-<span class="badge">
-✓ 一對一諮詢
-</span>
-
-<span class="badge">
-✓ 方案事前說明
-</span>
-
-<span class="badge">
-✓ 線上快速聯絡
-</span>
-
-<span class="badge">
-✓ 依實際條件評估
-</span>
-
+<span class="badge">✓ 一對一諮詢</span>
+<span class="badge">✓ 方案事前說明</span>
+<span class="badge">✓ 線上快速聯絡</span>
+<span class="badge">✓ 依實際條件評估</span>
 </div>
 
 <div class="btns">
@@ -643,39 +556,7 @@ LINE：xd5567
 </div>
 
 </div>
-
 </section>
-
-
-<!-- 四步驟 -->
-
-<div class="quickbar">
-
-<div class="container quickgrid">
-
-<div class="quickitem">
-<b>01</b>
-<span>提出需求</span>
-</div>
-
-<div class="quickitem">
-<b>02</b>
-<span>條件了解</span>
-</div>
-
-<div class="quickitem">
-<b>03</b>
-<span>方案評估</span>
-</div>
-
-<div class="quickitem">
-<b>04</b>
-<span>確認辦理</span>
-</div>
-
-</div>
-
-</div>
 
 
 <!-- 服務 -->
@@ -685,20 +566,85 @@ LINE：xd5567
 <div class="container">
 
 <h2 class="title">
-熱門資金諮詢
+資金諮詢服務
 </h2>
 
 <p class="sub">
-不同需求需要不同評估方式，
-先了解基本條件，
-再找適合自己的方向。
+用圖像快速找到您的需求。
+不同方案仍需依個人條件與正式審核結果為準。
 </p>
 
-<div class="grid">
+<div class="service-grid">
 
-<div class="card">
 
-<div class="num">
+<!-- 汽車 -->
+
+<div class="service-card">
+
+<div class="visual">
+
+<svg viewBox="0 0 600 260">
+
+<defs>
+<linearGradient id="carG" x1="0" x2="1">
+<stop stop-color="#f0d28b"/>
+<stop offset="1" stop-color="#8d713d"/>
+</linearGradient>
+</defs>
+
+<path
+d="M115 168l40-75c9-17 25-27 44-27h190c22 0 39 10 51 29l43 73 34 16v35H83v-35z"
+fill="url(#carG)"
+/>
+
+<path
+d="M190 91h194l38 65H157z"
+fill="#17191d"
+/>
+
+<circle
+cx="165"
+cy="211"
+r="32"
+fill="#08090b"
+stroke="#d7b56d"
+stroke-width="8"
+/>
+
+<circle
+cx="435"
+cy="211"
+r="32"
+fill="#08090b"
+stroke="#d7b56d"
+stroke-width="8"
+/>
+
+<rect
+x="105"
+y="174"
+width="70"
+height="18"
+rx="9"
+fill="#fff0b8"
+/>
+
+<rect
+x="425"
+y="174"
+width="70"
+height="18"
+rx="9"
+fill="#fff0b8"
+/>
+
+</svg>
+
+</div>
+
+<div class="service-content">
+
+<div class="service-num">
 SERVICE 01
 </div>
 
@@ -707,16 +653,61 @@ SERVICE 01
 </h3>
 
 <p>
-依車輛狀況、持有情況與個人條件
-進行初步評估。
+依車輛狀況、持有情況與個人條件，
+協助了解可行的資金方向。
 </p>
+
+<a
+class="service-link"
+href="https://line.me/ti/p/~xd5567"
+target="_blank">
+立即諮詢 →
+</a>
+
+</div>
 
 </div>
 
 
-<div class="card">
+<!-- 機車 -->
 
-<div class="num">
+<div class="service-card">
+
+<div class="visual">
+
+<svg viewBox="0 0 600 260">
+
+<g
+fill="none"
+stroke="#d7b56d"
+stroke-width="18"
+stroke-linecap="round"
+stroke-linejoin="round">
+
+<circle cx="170" cy="197" r="50"/>
+<circle cx="430" cy="197" r="50"/>
+
+<path d="M170 197l75-72h85l65 72"/>
+<path d="M245 125l-35-55"/>
+<path d="M330 125l48-72"/>
+<path d="M363 64h58"/>
+<path d="M245 125l95 72"/>
+<path d="M340 197H170"/>
+
+</g>
+
+<path
+d="M228 102h100l25 28H248z"
+fill="#f0d28b"
+/>
+
+</svg>
+
+</div>
+
+<div class="service-content">
+
+<div class="service-num">
 SERVICE 02
 </div>
 
@@ -726,16 +717,197 @@ SERVICE 02
 
 <p>
 針對機車持有人之資金需求，
-進行基本條件了解。
+依車況與基本條件進行初步了解。
 </p>
+
+<a
+class="service-link"
+href="https://line.me/ti/p/~xd5567"
+target="_blank">
+立即諮詢 →
+</a>
+
+</div>
 
 </div>
 
 
-<div class="card">
+<!-- 雙證件 -->
 
-<div class="num">
+<div class="service-card">
+
+<div class="visual">
+
+<svg viewBox="0 0 600 260">
+
+<rect
+x="95"
+y="48"
+width="250"
+height="165"
+rx="18"
+fill="#d7b56d"
+transform="rotate(-8 95 48)"
+/>
+
+<rect
+x="260"
+y="60"
+width="250"
+height="165"
+rx="18"
+fill="#eee5cf"
+transform="rotate(8 260 60)"
+/>
+
+<circle
+cx="330"
+cy="125"
+r="32"
+fill="#8f7544"
+/>
+
+<rect
+x="378"
+y="102"
+width="85"
+height="10"
+rx="5"
+fill="#8f7544"
+/>
+
+<rect
+x="378"
+y="127"
+width="65"
+height="10"
+rx="5"
+fill="#8f7544"
+/>
+
+<rect
+x="378"
+y="152"
+width="92"
+height="10"
+rx="5"
+fill="#8f7544"
+/>
+
+<circle
+cx="175"
+cy="120"
+r="30"
+fill="#17191d"
+/>
+
+<rect
+x="215"
+y="98"
+width="78"
+height="10"
+rx="5"
+fill="#17191d"
+/>
+
+<rect
+x="215"
+y="123"
+width="60"
+height="10"
+rx="5"
+fill="#17191d"
+/>
+
+</svg>
+
+</div>
+
+<div class="service-content">
+
+<div class="service-num">
 SERVICE 03
+</div>
+
+<h3>
+雙證件方案諮詢
+</h3>
+
+<p>
+沒有汽機車也可以先詢問，
+依工作、收入與實際條件進行初步評估。
+</p>
+
+<a
+class="service-link"
+href="https://line.me/ti/p/~xd5567"
+target="_blank">
+了解方案 →
+</a>
+
+</div>
+
+</div>
+
+
+<!-- 個人資金 -->
+
+<div class="service-card">
+
+<div class="visual">
+
+<svg viewBox="0 0 600 260">
+
+<rect
+x="115"
+y="70"
+width="360"
+height="145"
+rx="18"
+fill="#d7b56d"
+/>
+
+<rect
+x="145"
+y="95"
+width="300"
+height="95"
+rx="12"
+fill="#1a1c20"
+/>
+
+<circle
+cx="295"
+cy="143"
+r="45"
+fill="#d7b56d"
+/>
+
+<text
+x="295"
+y="162"
+text-anchor="middle"
+font-size="60"
+font-weight="900"
+fill="#17191d">
+$
+</text>
+
+<path
+d="M80 105h105M415 180h105"
+stroke="#f0d28b"
+stroke-width="14"
+stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
+
+<div class="service-content">
+
+<div class="service-num">
+SERVICE 04
 </div>
 
 <h3>
@@ -743,42 +915,163 @@ SERVICE 03
 </h3>
 
 <p>
-依工作、收入、需求金額
-與還款能力了解可行方向。
+依工作、收入、需求金額與還款能力，
+協助了解適合自己的資金方向。
 </p>
+
+<a
+class="service-link"
+href="https://line.me/ti/p/~xd5567"
+target="_blank">
+免費諮詢 →
+</a>
+
+</div>
 
 </div>
 
 
-<div class="card">
+<!-- 債務整合 -->
 
-<div class="num">
-SERVICE 04
+<div class="service-card">
+
+<div class="visual">
+
+<svg viewBox="0 0 600 260">
+
+<circle
+cx="300"
+cy="130"
+r="82"
+fill="none"
+stroke="#d7b56d"
+stroke-width="20"
+/>
+
+<path
+d="M235 118l42 42 92-98"
+fill="none"
+stroke="#f2d58f"
+stroke-width="22"
+stroke-linecap="round"
+stroke-linejoin="round"
+/>
+
+<path
+d="M165 75h90M345 190h90"
+stroke="#8d713d"
+stroke-width="14"
+stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
+
+<div class="service-content">
+
+<div class="service-num">
+SERVICE 05
 </div>
 
 <h3>
-雙證件方案
+債務整合諮詢
 </h3>
 
 <p>
-先了解基本條件，
-再說明可能的方案與所需資料。
+協助整理目前負債與每月支出，
+了解是否有更合適的資金規劃方向。
 </p>
 
-</div>
+<a
+class="service-link"
+href="https://line.me/ti/p/~xd5567"
+target="_blank">
+詢問整合方向 →
+</a>
 
 </div>
 
 </div>
 
+
+<!-- 其他需求 -->
+
+<div class="service-card">
+
+<div class="visual">
+
+<svg viewBox="0 0 600 260">
+
+<circle
+cx="220"
+cy="115"
+r="55"
+fill="#d7b56d"
+/>
+
+<circle
+cx="380"
+cy="115"
+r="55"
+fill="#8d713d"
+/>
+
+<rect
+x="190"
+y="165"
+width="220"
+height="28"
+rx="14"
+fill="#f0d28b"
+/>
+
+<path
+d="M275 115h50"
+stroke="#17191d"
+stroke-width="18"
+stroke-linecap="round"
+/>
+
+</svg>
+
+</div>
+
+<div class="service-content">
+
+<div class="service-num">
+SERVICE 06
+</div>
+
+<h3>
+其他資金需求
+</h3>
+
+<p>
+如果不確定自己適合哪一種方案，
+也可以先說明需求，再協助了解方向。
+</p>
+
+<a
+class="service-link"
+href="https://line.me/ti/p/~xd5567"
+target="_blank">
+直接詢問 →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+</div>
 </section>
 
 
 <!-- 優勢 -->
 
-<section
-class="section-dark"
-id="why">
+<section class="section-dark">
 
 <div class="container">
 
@@ -787,93 +1080,40 @@ id="why">
 </h2>
 
 <p class="sub">
-專業不是把話說得很滿，
-而是把流程、條件與重要資訊說清楚。
+先把需求、流程與重要條件說清楚，
+再由您決定是否進一步辦理。
 </p>
 
 <div class="whygrid">
 
 <div class="whybox">
-
-<b>
-先了解，再決定
-</b>
-
-<p>
-先確認需求與基本條件，
-不需要一開始就做決定。
-</p>
-
+<b>先了解，再決定</b>
+<p>可以先諮詢，不需要一開始就做決定。</p>
 </div>
 
-
 <div class="whybox">
-
-<b>
-方案內容清楚說明
-</b>
-
-<p>
-額度、期數、利率與相關費用，
-依實際方案說明。
-</p>
-
+<b>方案內容清楚說明</b>
+<p>實際額度、利率、期數及費用以正式方案為準。</p>
 </div>
 
-
 <div class="whybox">
-
-<b>
-重視還款能力
-</b>
-
-<p>
-不只看需要多少資金，
-也考量每月負擔是否合理。
-</p>
-
+<b>重視還款能力</b>
+<p>除了資金需求，也重視每月負擔是否合理。</p>
 </div>
 
-
 <div class="whybox">
-
-<b>
-線上即可先諮詢
-</b>
-
-<p>
-透過網站或 LINE
-即可先了解基本方向。
-</p>
-
+<b>線上快速聯絡</b>
+<p>網站與 LINE 都可以直接先了解基本方向。</p>
 </div>
 
-
 <div class="whybox">
-
-<b>
-依條件進行評估
-</b>
-
-<p>
-實際額度與是否核准，
-仍依個人條件及正式審核結果為準。
-</p>
-
+<b>依實際條件評估</b>
+<p>不以保證核准方式招攬，實際結果依正式審核為準。</p>
 </div>
 
-
 <div class="whybox">
-
-<b>
-個資用途說明
-</b>
-
-<p>
-網站表單資料僅用於
-本次諮詢、聯絡與需求了解。
-</p>
-
+<b>個資用途清楚</b>
+<p>表單資料僅用於本次諮詢、聯絡與需求了解。</p>
 </div>
 
 </div>
@@ -885,83 +1125,42 @@ id="why">
 
 <!-- 流程 -->
 
-<section id="process">
+<section>
 
 <div class="container">
 
 <h2 class="title">
-申請流程
+簡單四步驟
 </h2>
 
 <p class="sub">
-簡單四步驟，
-先了解自己的狀況，
-再決定下一步。
+先了解自己的狀況，再決定下一步。
 </p>
 
 <div class="process">
 
 <div class="step">
-
 <b>01</b>
-
-<h3>
-提出需求
-</h3>
-
-<p>
-告訴我們預計需要的
-金額與資金需求。
-</p>
-
+<h3>提出需求</h3>
+<p>告訴我們預計需要的金額與用途。</p>
 </div>
 
-
 <div class="step">
-
 <b>02</b>
-
-<h3>
-條件了解
-</h3>
-
-<p>
-了解職業、收入
-與目前基本負擔。
-</p>
-
+<h3>條件了解</h3>
+<p>了解職業、收入與目前基本負擔。</p>
 </div>
 
-
 <div class="step">
-
 <b>03</b>
-
-<h3>
-方案評估
-</h3>
-
-<p>
-依條件說明可進一步
-了解的方案方向。
-</p>
-
+<h3>方案評估</h3>
+<p>依實際條件說明可了解的方案方向。</p>
 </div>
 
-
 <div class="step">
-
 <b>04</b>
-
-<h3>
-確認辦理
-</h3>
-
-<p>
-充分了解相關條件後，
-再決定是否辦理。
-</p>
-
+<h3>確認辦理</h3>
+<p>充分了解條件後，再決定是否辦理。</p>
 </div>
 
 </div>
@@ -971,7 +1170,7 @@ id="why">
 </section>
 
 
-<!-- 試算器 -->
+<!-- 試算 -->
 
 <section
 class="section-dark"
@@ -984,7 +1183,7 @@ id="calc">
 </h2>
 
 <p class="sub">
-輸入需求金額、期數與預估年利率，
+輸入金額、期數與預估年利率，
 快速了解每月付款概念。
 試算結果僅供參考。
 </p>
@@ -1002,22 +1201,19 @@ id="calc">
 </label>
 
 <input
-id="loanAmount"
+id="amount"
 type="number"
-inputmode="numeric"
-value="100000"
-min="1000">
+value="100000">
 
 </div>
-
 
 <div>
 
 <label>
-期數（月）
+期數
 </label>
 
-<select id="loanMonths">
+<select id="months">
 
 <option value="12">
 12期
@@ -1027,9 +1223,7 @@ min="1000">
 24期
 </option>
 
-<option
-value="36"
-selected>
+<option value="36" selected>
 36期
 </option>
 
@@ -1045,7 +1239,6 @@ selected>
 
 </div>
 
-
 <div>
 
 <label>
@@ -1053,22 +1246,19 @@ selected>
 </label>
 
 <input
-id="annualRate"
+id="rate"
 type="number"
-inputmode="decimal"
 value="12"
-min="0"
 step="0.1">
 
 </div>
-
 
 <div style="display:flex;align-items:end">
 
 <button
 class="btn primary"
 type="button"
-onclick="calculateLoan()"
+onclick="calcLoan()"
 style="width:100%">
 
 立即試算
@@ -1082,7 +1272,7 @@ style="width:100%">
 </div>
 
 
-<div class="resultbox">
+<div class="result">
 
 <div class="small">
 預估每月付款
@@ -1090,33 +1280,26 @@ style="width:100%">
 
 <div
 class="resultnum"
-id="monthlyPayment">
+id="payment">
 NT$ 3,321
 </div>
 
 <div
 class="small"
-id="calcDetail">
+id="detail">
 100,000 元｜36期｜年利率 12%
 </div>
 
-<p
-class="small"
-style="margin-top:18px">
-
-※ 此為一般本息試算，
-未包含可能產生的其他費用。
-實際利率、期數、費用與月付金額，
-請以正式方案及契約內容為準。
-
+<p class="small">
+※ 一般本息試算，未包含可能產生的其他費用。
+實際條件以正式方案及契約為準。
 </p>
 
 <a
 class="btn secondary"
 href="https://line.me/ti/p/~xd5567"
 target="_blank"
-rel="noopener"
-style="margin-top:10px">
+rel="noopener">
 
 詢問我的試算結果
 
@@ -1146,8 +1329,6 @@ style="margin-top:10px">
 可以先看看這裡。
 </p>
 
-<div class="faq">
-
 <details>
 
 <summary>
@@ -1155,29 +1336,11 @@ style="margin-top:10px">
 </summary>
 
 <p>
-不用。
-可以先了解可能的方案與條件，
+不用。可以先了解可能方案與條件，
 再自行決定是否進一步辦理。
 </p>
 
 </details>
-
-
-<details>
-
-<summary>
-可以直接知道自己能借多少嗎？
-</summary>
-
-<p>
-實際額度可能受到收入、
-工作狀況、現有負擔、
-擔保品或其他條件影響，
-需要先了解基本資料。
-</p>
-
-</details>
-
 
 <details>
 
@@ -1187,47 +1350,51 @@ style="margin-top:10px">
 
 <p>
 可以先詢問。
-是否有可評估方向，
-仍需依車輛狀況、
+是否有可評估方向仍需依車況、
 現有設定與個人條件判斷。
 </p>
 
 </details>
 
-
 <details>
 
 <summary>
-多久可以知道評估結果？
+沒有汽機車也能詢問嗎？
 </summary>
 
 <p>
-會依方案、資料完整程度
-與審核情況不同。
-提供完整基本資料，
-通常有助於後續評估。
+可以。
+可以先從雙證件或個人資金週轉方向進行基本了解。
 </p>
 
 </details>
 
+<details>
+
+<summary>
+可以詢問債務整合嗎？
+</summary>
+
+<p>
+可以先整理目前負債、月繳金額與收入狀況，
+再了解是否有可規劃的方向。
+</p>
+
+</details>
 
 <details>
 
 <summary>
-網站上的試算就是最後月付嗎？
+網站試算就是最後月付嗎？
 </summary>
 
 <p>
 不是。
-網站試算僅提供概念參考，
-實際利率、費用、期數
-與月付金額，
-仍以正式方案與契約為準。
+試算僅供概念參考，
+實際利率、費用、期數與月付仍以正式方案與契約為準。
 </p>
 
 </details>
-
-</div>
 
 </div>
 
@@ -1248,14 +1415,13 @@ id="apply">
 
 <p class="sub">
 留下基本需求，
-我們會依您提供的資訊
-與您聯繫。
+我們會依您提供的資訊與您聯繫。
 </p>
 
 <div class="formwrap">
 
 <form
-class="formbox"
+class="form"
 action="https://formsubmit.co/qwe0916227109@gmail.com"
 method="POST">
 
@@ -1289,7 +1455,6 @@ style="display:none">
 <input
 name="姓名"
 required
-autocomplete="name"
 placeholder="請輸入姓名">
 
 </div>
@@ -1305,7 +1470,6 @@ placeholder="請輸入姓名">
 name="聯絡電話"
 required
 inputmode="tel"
-autocomplete="tel"
 placeholder="例如：09xxxxxxxx">
 
 </div>
@@ -1351,27 +1515,10 @@ placeholder="例如：09xxxxxxxx">
 <div>
 
 <label>
-目前職業
-</label>
-
-<input
-name="目前職業"
-placeholder="例如：上班族／自營／勞工">
-
-</div>
-
-
-<div>
-
-<label>
 主要需求
 </label>
 
 <select name="主要需求">
-
-<option>
-資金週轉
-</option>
 
 <option>
 汽車資金
@@ -1386,10 +1533,31 @@ placeholder="例如：上班族／自營／勞工">
 </option>
 
 <option>
+個人資金週轉
+</option>
+
+<option>
+債務整合
+</option>
+
+<option>
 其他
 </option>
 
 </select>
+
+</div>
+
+
+<div>
+
+<label>
+目前職業
+</label>
+
+<input
+name="目前職業"
+placeholder="例如：上班族／自營／勞工">
 
 </div>
 
@@ -1444,7 +1612,6 @@ style="
 display:flex;
 gap:10px;
 align-items:flex-start;
-cursor:pointer;
 ">
 
 <input
@@ -1461,7 +1628,7 @@ margin-top:7px;
 
 我同意安心借為提供本次諮詢、
 聯絡與需求評估之目的，
-蒐集並使用我於本表單所填寫之資料。
+蒐集並使用本表單資料。
 
 </span>
 
@@ -1471,7 +1638,7 @@ margin-top:7px;
 <button
 class="btn primary"
 type="submit"
-style="margin-top:18px">
+style="margin-top:16px">
 
 送出免費諮詢
 
@@ -1491,9 +1658,9 @@ style="margin-top:18px">
 </strong>
 
 <p>
-辦理前應確認利率、期數、
-總費用、違約條款與每月應繳金額。
-網站內容與試算不代表任何核准承諾。
+辦理前請確認利率、期數、總費用、
+違約條款與每月應繳金額；
+網站內容不代表核准承諾。
 </p>
 
 </div>
@@ -1502,10 +1669,9 @@ style="margin-top:18px">
 
 </section>
 
+
 </main>
 
-
-<!-- 頁尾 -->
 
 <footer class="footer">
 
@@ -1528,8 +1694,6 @@ LINE：xd5567
 </footer>
 
 
-<!-- LINE 浮動按鈕 -->
-
 <a
 class="linefloat"
 href="https://line.me/ti/p/~xd5567"
@@ -1543,46 +1707,37 @@ LINE 諮詢
 
 <script>
 
-function calculateLoan(){
+function calcLoan(){
 
-  const amount =
+  const a =
   Number(
-    document.getElementById("loanAmount").value || 0
+    document.getElementById("amount").value || 0
   );
 
-  const months =
+  const m =
   Number(
-    document.getElementById("loanMonths").value || 1
+    document.getElementById("months").value || 1
   );
 
   const annual =
   Number(
-    document.getElementById("annualRate").value || 0
+    document.getElementById("rate").value || 0
   );
 
   const r =
   annual / 100 / 12;
 
-  let monthly = 0;
-
-  if(r === 0){
-
-    monthly =
-    amount / months;
-
-  }else{
-
-    monthly =
-    amount *
+  const p =
+  r === 0
+  ? a / m
+  : a *
     r *
-    Math.pow(1+r,months) /
+    Math.pow(1+r,m) /
     (
-      Math.pow(1+r,months)-1
+      Math.pow(1+r,m)-1
     );
 
-  }
-
-  const fmt =
+  const f =
   new Intl.NumberFormat(
     "zh-TW",
     {
@@ -1591,25 +1746,26 @@ function calculateLoan(){
   );
 
   document.getElementById(
-    "monthlyPayment"
+    "payment"
   ).textContent =
-  "NT$ " + fmt.format(monthly);
+  "NT$ " + f.format(p);
 
   document.getElementById(
-    "calcDetail"
+    "detail"
   ).textContent =
-  fmt.format(amount) +
+  f.format(a) +
   " 元｜" +
-  months +
+  m +
   "期｜年利率 " +
   annual +
   "%";
 
 }
 
-calculateLoan();
+calcLoan();
 
 </script>
+
 
 </body>
   </html>
