@@ -1,1971 +1,2185 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
+
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>安心借｜借款・資金週轉｜專業線上諮詢</title>
-
-  <meta
-    name="description"
-    content="安心借提供汽車、機車、雙證件及個人資金週轉諮詢，線上試算與基本條件評估。"
-  >
-
-  <meta
-    name="keywords"
-    content="安心借,借款,資金週轉,汽車借款,機車借款,雙證件,小額借款"
-  >
-
-  <meta
-    name="robots"
-    content="index,follow"
-  >
-
-  <style>
-
-    *{
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
-    }
-
-    html{
-      scroll-behavior:smooth;
-    }
-
-    body{
-      background:#070809;
-      color:#f5f2eb;
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Noto Sans TC",
-        Arial,
-        sans-serif;
-      line-height:1.7;
-    }
-
-    a{
-      text-decoration:none;
-      color:inherit;
-    }
-
-    img{
-      display:block;
-      width:100%;
-    }
-
-    button,
-    input,
-    select{
-      font:inherit;
-    }
-
-    .container{
-      width:min(1120px,92%);
-      margin:auto;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
-    header{
-      position:sticky;
-      top:0;
-      z-index:1000;
-      background:rgba(7,8,9,.94);
-      backdrop-filter:blur(15px);
-      border-bottom:1px solid #252525;
-    }
-
-    .nav{
-      min-height:82px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-
-    .logo{
-      font-size:24px;
-      font-weight:900;
-      letter-spacing:1px;
-    }
-
-    .logo span{
-      color:#c99c51;
-      font-weight:700;
-    }
-
-    .nav-right{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-
-    .nav-link{
-      color:#aaa59c;
-      font-size:14px;
-    }
-
-    .line-outline{
-      border:1px solid #b88a43;
-      color:#d6ad68;
-      padding:11px 20px;
-      border-radius:999px;
-      font-weight:800;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero{
-      min-height:620px;
-      display:flex;
-      align-items:center;
-      position:relative;
-      overflow:hidden;
-      border-bottom:1px solid #222;
-    }
-
-    .hero:before{
-      content:"";
-      position:absolute;
-      width:520px;
-      height:520px;
-      right:-180px;
-      top:-100px;
-      border-radius:50%;
-      background:
-        radial-gradient(
-          circle,
-          rgba(190,139,61,.15),
-          transparent 68%
-        );
-    }
-
-    .hero-content{
-      position:relative;
-      z-index:2;
-      max-width:800px;
-      padding:90px 0;
-    }
-
-    .eyebrow{
-      color:#c79b55;
-      letter-spacing:4px;
-      font-size:13px;
-      font-weight:800;
-      margin-bottom:18px;
-    }
-
-    .hero h1{
-      font-size:clamp(42px,7vw,76px);
-      line-height:1.12;
-      letter-spacing:-2px;
-      margin-bottom:25px;
-    }
-
-    .hero h1 span{
-      color:#c99c51;
-    }
-
-    .hero p{
-      max-width:650px;
-      color:#aaa69f;
-      font-size:18px;
-      margin-bottom:34px;
-    }
-
-    .hero-buttons{
-      display:flex;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    .gold-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:52px;
-      padding:0 28px;
-      background:
-        linear-gradient(
-          135deg,
-          #a97b37,
-          #d7b264
-        );
-      color:#090909;
-      border-radius:10px;
-      font-weight:900;
-      border:0;
-      cursor:pointer;
-    }
-
-    .dark-btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      min-height:52px;
-      padding:0 28px;
-      border:1px solid #393939;
-      color:#ddd;
-      border-radius:10px;
-      font-weight:800;
-    }
-
-
-    /* =========================
-       COMMON
-    ========================= */
-
-    section{
-      padding:90px 0;
-    }
-
-    .section-title{
-      margin-bottom:42px;
-    }
-
-    .section-title small{
-      display:block;
-      color:#b98b45;
-      letter-spacing:4px;
-      font-size:12px;
-      font-weight:800;
-      margin-bottom:10px;
-    }
-
-    .section-title h2{
-      font-size:clamp(30px,5vw,48px);
-      margin-bottom:10px;
-    }
-
-    .section-title p{
-      color:#918d86;
-      max-width:680px;
-    }
-
-
-    /* =========================
-       SERVICES
-    ========================= */
-
-    .services{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:25px;
-    }
-
-    .service-card{
-      overflow:hidden;
-      background:#0c0d0f;
-      border:1px solid #303030;
-      border-radius:25px;
-      transition:.25s;
-    }
-
-    .service-card:hover{
-      transform:translateY(-4px);
-      border-color:#70552f;
-    }
-
-    .service-image{
-      width:100%;
-      aspect-ratio:16/10;
-      object-fit:cover;
-    }
-
-    .service-content{
-      padding:28px;
-    }
-
-    .service-number{
-      color:#a97d3f;
-      letter-spacing:4px;
-      font-size:12px;
-      margin-bottom:8px;
-    }
-
-    .service-content h3{
-      font-size:27px;
-      margin-bottom:8px;
-    }
-
-    .service-content p{
-      color:#8f8b84;
-      margin-bottom:18px;
-    }
-
-    .service-link{
-      color:#c79a52;
-      font-weight:900;
-    }
-
-
-    /* =========================
-       PROCESS
-    ========================= */
-
-    .process{
-      background:#0b0c0e;
-      border-top:1px solid #1e1e1e;
-      border-bottom:1px solid #1e1e1e;
-    }
-
-    .steps{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-    }
-
-    .step{
-      background:#101113;
-      border:1px solid #2e2e2e;
-      border-radius:18px;
-      padding:25px;
-    }
-
-    .step-number{
-      width:42px;
-      height:42px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:50%;
-      background:#19150e;
-      border:1px solid #71562e;
-      color:#d2a65d;
-      font-weight:900;
-      margin-bottom:17px;
-    }
-
-    .step h3{
-      margin-bottom:8px;
-    }
-
-    .step p{
-      color:#85817a;
-      font-size:14px;
-    }
-
-
-    /* =========================
-       CALCULATOR
-    ========================= */
-
-    .calculator-wrap{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:30px;
-    }
-
-    .calculator-box,
-    .result-box{
-      background:#101113;
-      border:1px solid #303030;
-      border-radius:22px;
-      padding:30px;
-    }
-
-    .field{
-      margin-bottom:20px;
-    }
-
-    .field label{
-      display:block;
-      margin-bottom:8px;
-      color:#d8d4cd;
-      font-weight:700;
-    }
-
-    .field input,
-    .field select{
-      width:100%;
-      padding:15px;
-      background:#08090a;
-      color:white;
-      border:1px solid #383838;
-      border-radius:10px;
-      outline:none;
-    }
-
-    .field input:focus,
-    .field select:focus{
-      border-color:#b98c48;
-    }
-
-    .result-box{
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-    }
-
-    .result-label{
-      color:#8f8b84;
-      margin-bottom:5px;
-    }
-
-    .payment{
-      color:#d4aa63;
-      font-size:45px;
-      font-weight:900;
-      margin-bottom:12px;
-    }
-
-    #detail{
-      color:#8e8a83;
-    }
-
-    .calculator-note{
-      margin-top:20px;
-      color:#666;
-      font-size:12px;
-    }
-
-
-    /* =========================
-       ASSESSMENT FORM
-    ========================= */
-
-    #assessment{
-      background:#0b0c0e;
-      border-top:1px solid #202020;
-      border-bottom:1px solid #202020;
-    }
-
-    .formwrap{
-      background:#101113;
-      border:1px solid #343434;
-      border-radius:25px;
-      padding:32px;
-    }
-
-    .assessment-form{
-      display:grid;
-      grid-template-columns:repeat(2,1fr);
-      gap:20px;
-    }
-
-    .form-item label{
-      display:block;
-      margin-bottom:8px;
-      color:#ddd8d0;
-      font-size:14px;
-      font-weight:800;
-    }
-
-    .form-item input,
-    .form-item select{
-      width:100%;
-      padding:15px;
-      border-radius:10px;
-      border:1px solid #393939;
-      background:#08090a;
-      color:#fff;
-      outline:none;
-    }
-
-    .form-item input:focus,
-    .form-item select:focus{
-      border-color:#c39956;
-    }
-
-    .full{
-      grid-column:1/-1;
-    }
-
-    .agree{
-      display:flex !important;
-      align-items:flex-start;
-      gap:10px;
-      color:#8c8881 !important;
-      font-size:12px !important;
-      font-weight:400 !important;
-      line-height:1.6;
-    }
-
-    .agree input{
-      width:auto;
-      margin-top:4px;
-    }
-
-    .assessment-submit{
-      width:100%;
-      margin-top:20px;
-      padding:17px;
-      border:0;
-      border-radius:11px;
-      background:
-        linear-gradient(
-          135deg,
-          #a97b37,
-          #d8b568
-        );
-      color:#090909;
-      font-size:18px;
-      font-weight:900;
-      cursor:pointer;
-    }
-
-    .assessment-note{
-      color:#706d68;
-      font-size:12px;
-      margin-top:12px;
-      text-align:center;
-    }
-
-
-    /* =========================
-       FAQ
-    ========================= */
-
-    .faq-list{
-      display:grid;
-      gap:12px;
-    }
-
-    details{
-      background:#101113;
-      border:1px solid #303030;
-      border-radius:14px;
-      padding:20px;
-    }
-
-    summary{
-      cursor:pointer;
-      font-weight:800;
-      color:#e6e1d8;
-    }
-
-    details p{
-      color:#918d86;
-      padding-top:12px;
-    }
-
-
-    /* =========================
-       CTA
-    ========================= */
-
-    .cta{
-      text-align:center;
-    }
-
-    .cta-box{
-      padding:70px 30px;
-      border:1px solid #49391f;
-      border-radius:30px;
-      background:
-        radial-gradient(
-          circle at top,
-          #211b11,
-          #0b0c0e 65%
-        );
-    }
-
-    .cta h2{
-      font-size:clamp(34px,6vw,54px);
-      margin-bottom:15px;
-    }
-
-    .cta p{
-      color:#9d9991;
-      max-width:600px;
-      margin:0 auto 28px;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
-    footer{
-      border-top:1px solid #222;
-      padding:45px 0 110px;
-      color:#74716c;
-      font-size:13px;
-    }
-
-    .footer-inner{
-      display:flex;
-      justify-content:space-between;
-      gap:25px;
-    }
-
-    .footer-title{
-      color:#a9a49b;
-      font-weight:800;
-      margin-bottom:8px;
-    }
-
-
-    /* =========================
-       FLOAT LINE
-    ========================= */
-
-    .floating-line{
-      position:fixed;
-      right:24px;
-      bottom:25px;
-      z-index:999;
-      background:#06c755;
-      color:white;
-      padding:16px 24px;
-      border-radius:999px;
-      font-weight:900;
-      box-shadow:0 12px 30px rgba(0,0,0,.4);
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media(max-width:800px){
-
-      .nav{
-        min-height:70px;
-      }
-
-      .logo{
-        font-size:21px;
-      }
-
-      .nav-link{
-        display:none;
-      }
-
-      .line-outline{
-        padding:9px 15px;
-        font-size:14px;
-      }
-
-      .hero{
-        min-height:auto;
-      }
-
-      .hero-content{
-        padding:80px 0;
-      }
-
-      .hero h1{
-        font-size:45px;
-      }
-
-      .hero p{
-        font-size:16px;
-      }
-
-      section{
-        padding:65px 0;
-      }
-
-      .services{
-        grid-template-columns:1fr;
-      }
-
-      .steps{
-        grid-template-columns:1fr 1fr;
-      }
-
-      .calculator-wrap{
-        grid-template-columns:1fr;
-      }
-
-      .assessment-form{
-        grid-template-columns:1fr;
-      }
-
-      .full{
-        grid-column:auto;
-      }
-
-      .formwrap{
-        padding:20px;
-      }
-
-      .footer-inner{
-        flex-direction:column;
-      }
-
-      .floating-line{
-        right:18px;
-        bottom:18px;
-      }
-    }
-
-    @media(max-width:480px){
-
-      .steps{
-        grid-template-columns:1fr;
-      }
-
-      .hero h1{
-        font-size:39px;
-      }
-
-      .hero-buttons{
-        flex-direction:column;
-      }
-
-      .gold-btn,
-      .dark-btn{
-        width:100%;
-      }
-
-      .payment{
-        font-size:37px;
-      }
-    }
-
-  </style>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+>
+
+<title>
+安心借｜借款・資金週轉｜專業線上諮詢
+</title>
+
+<meta
+name="description"
+content="安心借提供汽車、機車、雙證件及個人資金週轉諮詢，線上試算與基本條件評估。"
+>
+
+<meta
+name="keywords"
+content="安心借,借款,資金週轉,汽車借款,機車借款,雙證件,個人週轉"
+>
+
+<meta
+name="robots"
+content="index,follow"
+>
+
+
+<style>
+
+/* =========================
+基本設定
+========================= */
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#070809;
+color:#f5f1e9;
+font-family:
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+"Noto Sans TC",
+"Microsoft JhengHei",
+Arial,
+sans-serif;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+display:block;
+width:100%;
+}
+
+button,
+input,
+select{
+font:inherit;
+}
+
+.container{
+width:min(1120px,92%);
+margin:auto;
+}
+
+
+/* =========================
+頂部
+========================= */
+
+header{
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(7,8,9,.95);
+backdrop-filter:blur(14px);
+border-bottom:1px solid #272727;
+}
+
+.nav{
+min-height:76px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+}
+
+.logo{
+font-size:23px;
+font-weight:900;
+letter-spacing:1px;
+}
+
+.logo span{
+color:#c99d55;
+}
+
+.navlinks{
+display:flex;
+align-items:center;
+gap:22px;
+}
+
+.navlinks a{
+font-size:14px;
+color:#aaa59d;
+}
+
+.line-top{
+border:1px solid #b88943;
+color:#d6ad68 !important;
+padding:9px 18px;
+border-radius:999px;
+font-weight:900;
+}
+
+
+/* =========================
+首頁
+========================= */
+
+.hero{
+min-height:590px;
+display:flex;
+align-items:center;
+position:relative;
+overflow:hidden;
+border-bottom:1px solid #222;
+}
+
+.hero:before{
+content:"";
+position:absolute;
+width:550px;
+height:550px;
+right:-220px;
+top:-80px;
+border-radius:50%;
+background:
+radial-gradient(
+circle,
+rgba(191,142,62,.18),
+transparent 68%
+);
+}
+
+.hero-inner{
+position:relative;
+z-index:2;
+padding:85px 0;
+max-width:810px;
+}
+
+.kicker{
+color:#c69a52;
+font-size:13px;
+font-weight:800;
+letter-spacing:5px;
+margin-bottom:18px;
+}
+
+.hero h1{
+font-size:clamp(42px,7vw,75px);
+line-height:1.12;
+letter-spacing:-2px;
+margin-bottom:22px;
+}
+
+.hero h1 span{
+color:#c99d55;
+}
+
+.hero p{
+max-width:670px;
+font-size:18px;
+color:#aaa59d;
+margin-bottom:30px;
+}
+
+.hero-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.gold-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:52px;
+padding:0 27px;
+border:0;
+border-radius:10px;
+background:
+linear-gradient(
+135deg,
+#a87a36,
+#dbb76a
+);
+color:#080808;
+font-weight:900;
+cursor:pointer;
+}
+
+.dark-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:52px;
+padding:0 27px;
+border:1px solid #3d3d3d;
+border-radius:10px;
+color:#ddd;
+font-weight:800;
+}
+
+
+/* =========================
+共用
+========================= */
+
+section{
+padding:82px 0;
+}
+
+.section-title{
+margin-bottom:38px;
+}
+
+.section-title small{
+display:block;
+color:#ba8c46;
+letter-spacing:4px;
+font-size:12px;
+font-weight:900;
+margin-bottom:8px;
+}
+
+.section-title h2{
+font-size:clamp(30px,5vw,47px);
+margin-bottom:8px;
+}
+
+.section-title p{
+color:#918d85;
+max-width:700px;
+}
+
+
+/* =========================
+四大服務
+========================= */
+
+.services{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+}
+
+.service-card{
+background:#0e0f11;
+border:1px solid #313131;
+border-radius:22px;
+overflow:hidden;
+}
+
+.service-image{
+width:100%;
+aspect-ratio:16/10;
+object-fit:cover;
+}
+
+.service-info{
+padding:25px;
+}
+
+.service-number{
+font-size:12px;
+letter-spacing:4px;
+color:#ba8b44;
+margin-bottom:5px;
+}
+
+.service-info h3{
+font-size:26px;
+margin-bottom:7px;
+}
+
+.service-info p{
+color:#918d85;
+margin-bottom:15px;
+}
+
+.service-info a{
+color:#c89a52;
+font-weight:900;
+}
+
+
+/* =========================
+特色
+========================= */
+
+.trust-section{
+background:#0b0c0e;
+border-top:1px solid #202020;
+border-bottom:1px solid #202020;
+}
+
+.trust{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:17px;
+}
+
+.trust-card{
+background:#101113;
+border:1px solid #2d2d2d;
+border-radius:17px;
+padding:25px;
+}
+
+.trust-number{
+color:#c49955;
+font-size:13px;
+letter-spacing:3px;
+margin-bottom:8px;
+}
+
+.trust-card h3{
+font-size:20px;
+margin-bottom:6px;
+}
+
+.trust-card p{
+color:#8a867f;
+font-size:14px;
+}
+
+
+/* =========================
+流程
+========================= */
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+}
+
+.step{
+border-top:2px solid #75562a;
+padding-top:20px;
+}
+
+.step-number{
+color:#c99e58;
+font-size:27px;
+font-weight:900;
+}
+
+.step h3{
+margin:6px 0;
+}
+
+.step p{
+color:#8f8a82;
+font-size:14px;
+}
+
+
+/* =========================
+試算
+========================= */
+
+#calculator{
+background:#0b0c0e;
+}
+
+.calculator-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+.calculator-box,
+.result-box{
+background:#101113;
+border:1px solid #303030;
+border-radius:22px;
+padding:28px;
+}
+
+.field{
+margin-bottom:19px;
+}
+
+.field label{
+display:block;
+color:#ddd8d0;
+font-weight:800;
+margin-bottom:7px;
+}
+
+.field input,
+.field select{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:1px solid #393939;
+background:#08090a;
+color:white;
+outline:none;
+}
+
+.field input:focus,
+.field select:focus{
+border-color:#c49852;
+}
+
+.result-box{
+display:flex;
+justify-content:center;
+flex-direction:column;
+}
+
+.result-label{
+color:#8d8981;
+}
+
+.payment{
+font-size:44px;
+font-weight:900;
+color:#d1a75e;
+margin:5px 0 10px;
+}
+
+#detail{
+color:#89857d;
+}
+
+.note{
+font-size:12px;
+color:#706d67;
+margin-top:13px;
+}
+
+
+/* =========================
+基本評估表
+========================= */
+
+#assessment{
+border-top:1px solid #202020;
+}
+
+.form-box{
+background:#101113;
+border:1px solid #343434;
+border-radius:24px;
+padding:30px;
+}
+
+.assessment-form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:19px;
+}
+
+.form-item label{
+display:block;
+font-size:14px;
+font-weight:800;
+color:#ddd8d0;
+margin-bottom:7px;
+}
+
+.form-item input,
+.form-item select{
+width:100%;
+padding:15px;
+border-radius:10px;
+border:1px solid #3a3a3a;
+background:#08090a;
+color:#fff;
+outline:none;
+}
+
+.form-item input:focus,
+.form-item select:focus{
+border-color:#c89b55;
+}
+
+.full{
+grid-column:1/-1;
+}
+
+.agree{
+display:flex !important;
+gap:10px;
+align-items:flex-start;
+font-size:12px !important;
+font-weight:400 !important;
+color:#88847d !important;
+}
+
+.agree input{
+width:auto;
+margin-top:5px;
+}
+
+.submit-btn{
+width:100%;
+margin-top:18px;
+padding:17px;
+border:0;
+border-radius:11px;
+background:
+linear-gradient(
+135deg,
+#a97a36,
+#dbb86b
+);
+color:#080808;
+font-size:18px;
+font-weight:900;
+cursor:pointer;
+}
+
+.form-note{
+font-size:12px;
+color:#706d67;
+text-align:center;
+margin-top:12px;
+}
+
+
+/* =========================
+FAQ
+========================= */
+
+.faq{
+display:grid;
+gap:12px;
+}
+
+details{
+background:#101113;
+border:1px solid #303030;
+border-radius:14px;
+padding:20px;
+}
+
+summary{
+font-weight:900;
+cursor:pointer;
+}
+
+details p{
+padding-top:11px;
+color:#918d85;
+}
+
+
+/* =========================
+最後 CTA
+========================= */
+
+.cta{
+text-align:center;
+}
+
+.cta-box{
+border:1px solid #47361e;
+border-radius:28px;
+padding:65px 25px;
+background:
+radial-gradient(
+circle at top,
+#211a10,
+#0b0c0e 65%
+);
+}
+
+.cta h2{
+font-size:clamp(34px,6vw,52px);
+margin-bottom:10px;
+}
+
+.cta p{
+color:#99958d;
+max-width:590px;
+margin:0 auto 25px;
+}
+
+
+/* =========================
+Footer
+========================= */
+
+footer{
+border-top:1px solid #222;
+padding:45px 0 105px;
+color:#77736d;
+font-size:13px;
+}
+
+.footer-title{
+color:#aaa59d;
+font-weight:900;
+margin-bottom:7px;
+}
+
+
+/* =========================
+LINE 浮動按鈕
+========================= */
+
+.line-float{
+position:fixed;
+right:18px;
+bottom:20px;
+z-index:999;
+padding:15px 22px;
+border-radius:999px;
+background:#06c755;
+color:#fff;
+font-weight:900;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+
+/* =========================
+手機版
+========================= */
+
+@media(max-width:800px){
+
+.navlinks a:not(.line-top){
+display:none;
+}
+
+.logo{
+font-size:20px;
+}
+
+.hero{
+min-height:auto;
+}
+
+.hero-inner{
+padding:75px 0;
+}
+
+.hero h1{
+font-size:43px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+section{
+padding:62px 0;
+}
+
+.services,
+.calculator-grid,
+.assessment-form{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:auto;
+}
+
+.trust{
+grid-template-columns:1fr;
+}
+
+.steps{
+grid-template-columns:1fr 1fr;
+}
+
+.form-box{
+padding:20px;
+}
+
+.payment{
+font-size:37px;
+}
+
+}
+
+@media(max-width:480px){
+
+.steps{
+grid-template-columns:1fr;
+}
+
+.hero-buttons{
+flex-direction:column;
+}
+
+.gold-btn,
+.dark-btn{
+width:100%;
+}
+
+}
+
+</style>
+
 </head>
 
 
 <body>
 
 
-<!-- HEADER -->
+<!-- ========================================
+頂部
+======================================== -->
 
 <header>
-  <div class="container nav">
 
-    <a class="logo" href="#">
-      安心借 <span>｜資金規劃</span>
-    </a>
+<div class="container nav">
 
-    <div class="nav-right">
+<a
+class="logo"
+href="#"
+>
+安心借 <span>｜資金規劃</span>
+</a>
 
-      <a class="nav-link" href="#services">
-        服務項目
-      </a>
 
-      <a class="nav-link" href="#calculator">
-        還款試算
-      </a>
+<div class="navlinks">
 
-      <a class="nav-link" href="#assessment">
-        基本評估
-      </a>
+<a href="#services">
+服務項目
+</a>
 
-      <a
-        class="line-outline"
-        href="https://line.me/ti/p/~xd5567"
-        target="_blank"
-      >
-        LINE 諮詢
-      </a>
+<a href="#calculator">
+還款試算
+</a>
 
-    </div>
-  </div>
+<a href="#assessment">
+基本評估
+</a>
+
+<a
+class="line-top"
+href="https://line.me/ti/p/~xd5567"
+target="_blank"
+rel="noopener"
+>
+LINE 諮詢
+</a>
+
+</div>
+
+</div>
+
 </header>
 
 
-<!-- HERO -->
+
+<!-- ========================================
+首頁
+======================================== -->
 
 <section class="hero">
 
-  <div class="container hero-content">
+<div class="container hero-inner">
 
-    <div class="eyebrow">
-      ANXIN FINANCIAL CONSULTING
-    </div>
+<div class="kicker">
+PROFESSIONAL FUNDING CONSULTING
+</div>
 
-    <h1>
-      資金需求，<br>
-      <span>先了解再決定。</span>
-    </h1>
 
-    <p>
-      汽車、機車、雙證件及個人資金週轉，
-      依實際工作、收入與個人條件進行初步了解。
-      有資金需求，不確定適合哪種方式，也可以先諮詢。
-    </p>
+<h1>
+資金需求，<br>
+<span>先了解再決定。</span>
+</h1>
 
-    <div class="hero-buttons">
 
-      <a
-        class="gold-btn"
-        href="#assessment"
-      >
-        免費基本評估
-      </a>
+<p>
+提供汽車、機車、雙證件與個人資金週轉諮詢。
+依照實際需求、工作與基本條件，
+協助先了解可能的資金方向。
+</p>
 
-      <a
-        class="dark-btn"
-        href="#calculator"
-      >
-        先試算月付
-      </a>
 
-    </div>
+<div class="hero-buttons">
 
-  </div>
+<a
+class="gold-btn"
+href="#assessment"
+>
+60 秒基本評估
+</a>
+
+<a
+class="dark-btn"
+href="#calculator"
+>
+先試算月付
+</a>
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- SERVICES -->
+
+<!-- ========================================
+四大服務
+======================================== -->
 
 <section id="services">
 
-  <div class="container">
-
-    <div class="section-title">
-
-      <small>SERVICES</small>
-
-      <h2>資金諮詢服務</h2>
-
-      <p>
-        依照不同需求與條件，
-        協助了解適合的資金方向。
-      </p>
-
-    </div>
+<div class="container">
 
 
-    <div class="services">
+<div class="section-title">
+
+<small>
+SERVICES
+</small>
+
+<h2>
+資金諮詢服務
+</h2>
+
+<p>
+不同需求有不同的評估方式，
+先找到適合自己的方向。
+</p>
+
+</div>
 
 
-      <!-- 汽車 -->
 
-      <article class="service-card">
-
-        <img
-          class="service-image"
-          src="Screenshot_20260819_135237_ChatGPT.jpg"
-          alt="汽車資金諮詢"
-          loading="lazy"
-        >
-
-        <div class="service-content">
-
-          <div class="service-number">
-            SERVICE 01
-          </div>
-
-          <h3>汽車資金諮詢</h3>
-
-          <p>
-            依車輛狀況、持有情況與個人條件，
-            協助了解可行的資金方向。
-          </p>
-
-          <a
-            class="service-link"
-            href="#assessment"
-          >
-            立即評估 →
-          </a>
-
-        </div>
-
-      </article>
+<div class="services">
 
 
-      <!-- 機車 -->
+<!-- 汽車 -->
 
-      <article class="service-card">
+<div class="service-card">
 
-        <img
-          class="service-image"
-          src="Screenshot_20260819_135227_ChatGPT.jpg"
-          alt="機車資金諮詢"
-          loading="lazy"
-        >
+<img
+class="service-image"
+src="Screenshot_20260819_135237_ChatGPT.jpg"
+alt="汽車資金諮詢"
+loading="lazy"
+>
 
-        <div class="service-content">
+<div class="service-info">
 
-          <div class="service-number">
-            SERVICE 02
-          </div>
+<div class="service-number">
+SERVICE 01
+</div>
 
-          <h3>機車資金諮詢</h3>
+<h3>
+汽車資金諮詢
+</h3>
 
-          <p>
-            針對機車持有人之資金需求，
-            依車況與基本條件進行初步了解。
-          </p>
+<p>
+依車輛狀況、持有情況與個人條件，
+協助了解可行的資金方向。
+</p>
 
-          <a
-            class="service-link"
-            href="#assessment"
-          >
-            立即評估 →
-          </a>
+<a href="#assessment">
+立即評估 →
+</a>
 
-        </div>
+</div>
 
-      </article>
-
-
-      <!-- 雙證件 -->
-
-      <article class="service-card">
-
-        <img
-          class="service-image"
-          src="Screenshot_20260819_135234_ChatGPT.jpg"
-          alt="雙證件方案諮詢"
-          loading="lazy"
-        >
-
-        <div class="service-content">
-
-          <div class="service-number">
-            SERVICE 03
-          </div>
-
-          <h3>雙證件方案諮詢</h3>
-
-          <p>
-            沒有汽機車也可以先諮詢，
-            依工作、收入與實際條件進行初步評估。
-          </p>
-
-          <a
-            class="service-link"
-            href="#assessment"
-          >
-            立即評估 →
-          </a>
-
-        </div>
-
-      </article>
+</div>
 
 
-      <!-- 個人週轉 -->
 
-      <article class="service-card">
+<!-- 機車 -->
 
-        <img
-          class="service-image"
-          src="Screenshot_20260819_135231_ChatGPT.jpg"
-          alt="個人資金週轉"
-          loading="lazy"
-        >
+<div class="service-card">
 
-        <div class="service-content">
+<img
+class="service-image"
+src="Screenshot_20260819_135227_ChatGPT.jpg"
+alt="機車資金諮詢"
+loading="lazy"
+>
 
-          <div class="service-number">
-            SERVICE 04
-          </div>
+<div class="service-info">
 
-          <h3>個人資金週轉</h3>
+<div class="service-number">
+SERVICE 02
+</div>
 
-          <p>
-            依工作、收入、需求金額與還款能力，
-            協助了解適合自己的資金方向。
-          </p>
+<h3>
+機車資金諮詢
+</h3>
 
-          <a
-            class="service-link"
-            href="#assessment"
-          >
-            立即評估 →
-          </a>
+<p>
+針對機車持有人之資金需求，
+依車況與基本條件進行初步了解。
+</p>
 
-        </div>
+<a href="#assessment">
+立即評估 →
+</a>
 
-      </article>
+</div>
 
-    </div>
+</div>
 
-  </div>
+
+
+<!-- 雙證件 -->
+
+<div class="service-card">
+
+<img
+class="service-image"
+src="Screenshot_20260819_135234_ChatGPT.jpg"
+alt="雙證件方案諮詢"
+loading="lazy"
+>
+
+<div class="service-info">
+
+<div class="service-number">
+SERVICE 03
+</div>
+
+<h3>
+雙證件方案諮詢
+</h3>
+
+<p>
+沒有汽機車也可以先諮詢，
+依工作、收入與實際條件進行初步了解。
+</p>
+
+<a href="#assessment">
+立即評估 →
+</a>
+
+</div>
+
+</div>
+
+
+
+<!-- 個人週轉 -->
+
+<div class="service-card">
+
+<img
+class="service-image"
+src="Screenshot_20260819_135231_ChatGPT.jpg"
+alt="個人資金週轉"
+loading="lazy"
+>
+
+<div class="service-info">
+
+<div class="service-number">
+SERVICE 04
+</div>
+
+<h3>
+個人資金週轉
+</h3>
+
+<p>
+依工作、收入、需求金額與還款能力，
+協助了解適合自己的資金方向。
+</p>
+
+<a href="#assessment">
+立即評估 →
+</a>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- PROCESS -->
 
-<section class="process">
+<!-- ========================================
+專業特色
+======================================== -->
 
-  <div class="container">
+<section class="trust-section">
 
-    <div class="section-title">
-
-      <small>PROCESS</small>
-
-      <h2>簡單 4 步驟</h2>
-
-      <p>
-        先了解條件，再決定是否繼續。
-      </p>
-
-    </div>
+<div class="container">
 
 
-    <div class="steps">
+<div class="section-title">
 
-      <div class="step">
+<small>
+WHY ANXIN
+</small>
 
-        <div class="step-number">1</div>
+<h2>
+先了解，再評估
+</h2>
 
-        <h3>填寫資料</h3>
-
-        <p>
-          留下基本工作、收入與需求資料。
-        </p>
-
-      </div>
+</div>
 
 
-      <div class="step">
-
-        <div class="step-number">2</div>
-
-        <h3>初步了解</h3>
-
-        <p>
-          依照提供的資料進行初步條件了解。
-        </p>
-
-      </div>
+<div class="trust">
 
 
-      <div class="step">
+<div class="trust-card">
 
-        <div class="step-number">3</div>
+<div class="trust-number">
+01
+</div>
 
-        <h3>方案說明</h3>
+<h3>
+先諮詢
+</h3>
 
-        <p>
-          說明可能的方案、期數與相關條件。
-        </p>
+<p>
+不用一開始就做決定，
+可以先了解自己的狀況與需求。
+</p>
 
-      </div>
+</div>
 
 
-      <div class="step">
+<div class="trust-card">
 
-        <div class="step-number">4</div>
+<div class="trust-number">
+02
+</div>
 
-        <h3>自行決定</h3>
+<h3>
+依條件了解
+</h3>
 
-        <p>
-          確認內容後，再決定是否進一步申請。
-        </p>
+<p>
+依工作、收入、車況及其他實際條件，
+進行初步了解。
+</p>
 
-      </div>
+</div>
 
-    </div>
 
-  </div>
+<div class="trust-card">
+
+<div class="trust-number">
+03
+</div>
+
+<h3>
+重視還款能力
+</h3>
+
+<p>
+資金規劃除了額度，
+也需要考量每月還款負擔。
+</p>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- CALCULATOR -->
+
+<!-- ========================================
+流程
+======================================== -->
+
+<section>
+
+<div class="container">
+
+
+<div class="section-title">
+
+<small>
+PROCESS
+</small>
+
+<h2>
+簡單四步驟
+</h2>
+
+</div>
+
+
+<div class="steps">
+
+
+<div class="step">
+
+<div class="step-number">
+01
+</div>
+
+<h3>
+留下資料
+</h3>
+
+<p>
+填寫基本需求與目前條件。
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+02
+</div>
+
+<h3>
+初步了解
+</h3>
+
+<p>
+依照提供的資料了解需求。
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+03
+</div>
+
+<h3>
+方案說明
+</h3>
+
+<p>
+說明可能的方案與相關條件。
+</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">
+04
+</div>
+
+<h3>
+自行決定
+</h3>
+
+<p>
+確認內容後，再決定是否進一步辦理。
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ========================================
+還款試算
+======================================== -->
 
 <section id="calculator">
 
-  <div class="container">
-
-    <div class="section-title">
-
-      <small>CALCULATOR</small>
-
-      <h2>還款試算</h2>
-
-      <p>
-        輸入金額、期數與年利率，
-        快速試算每月本息攤還金額。
-      </p>
-
-    </div>
+<div class="container">
 
 
-    <div class="calculator-wrap">
+<div class="section-title">
+
+<small>
+CALCULATOR
+</small>
+
+<h2>
+還款試算
+</h2>
+
+<p>
+輸入金額、期數及年利率，
+快速估算每月本息攤還金額。
+</p>
+
+</div>
 
 
-      <div class="calculator-box">
+<div class="calculator-grid">
 
 
-        <div class="field">
-
-          <label for="amount">
-            借款金額
-          </label>
-
-          <input
-            id="amount"
-            type="number"
-            value="100000"
-            min="1000"
-            step="1000"
-          >
-
-        </div>
+<div class="calculator-box">
 
 
-        <div class="field">
+<div class="field">
 
-          <label for="months">
-            還款期數
-          </label>
+<label for="amount">
+借款金額（元）
+</label>
 
-          <select id="months">
+<input
+id="amount"
+type="number"
+value="100000"
+min="1000"
+>
 
-            <option value="12">
-              12 期
-            </option>
-
-            <option value="24">
-              24 期
-            </option>
-
-            <option value="36">
-              36 期
-            </option>
-
-            <option value="48">
-              48 期
-            </option>
-
-            <option value="60" selected>
-              60 期
-            </option>
-
-          </select>
-
-        </div>
+</div>
 
 
-        <div class="field">
 
-          <label for="rate">
-            年利率（%）
-          </label>
+<div class="field">
 
-          <input
-            id="rate"
-            type="number"
-            value="15"
-            min="0"
-            max="100"
-            step="0.1"
-          >
+<label for="months">
+還款期數
+</label>
 
-        </div>
+<select id="months">
 
+<option value="12">
+12 期
+</option>
 
-        <button
-          class="gold-btn"
-          type="button"
-          onclick="calculateLoan()"
-          style="width:100%;"
-        >
-          重新試算
-        </button>
+<option value="24">
+24 期
+</option>
 
+<option value="36">
+36 期
+</option>
 
-        <p class="calculator-note">
-          本試算僅供參考，不代表實際核准條件。
-          實際金額、期數、利率及費用仍依個別方案與審核結果為準。
-        </p>
+<option value="48">
+48 期
+</option>
 
-      </div>
+<option value="60" selected>
+60 期
+</option>
+
+</select>
+
+</div>
 
 
-      <div class="result-box">
 
-        <div class="result-label">
-          預估每月還款
-        </div>
+<div class="field">
 
-        <div
-          class="payment"
-          id="monthlyPayment"
-        >
-          NT$ 0
-        </div>
+<label for="rate">
+年利率（%）
+</label>
 
-        <div id="detail">
-          —
-        </div>
+<input
+id="rate"
+type="number"
+value="15"
+min="0"
+step="0.1"
+>
 
-      </div>
+</div>
 
 
-    </div>
+<button
+class="gold-btn"
+type="button"
+onclick="calculateLoan()"
+style="width:100%;"
+>
+開始試算
+</button>
 
-  </div>
+
+<p class="note">
+※ 本試算僅供參考。
+實際金額、期數、利率與費用，
+依個別案件及正式方案為準。
+</p>
+
+
+</div>
+
+
+
+<div class="result-box">
+
+<div class="result-label">
+預估每月還款
+</div>
+
+<div
+class="payment"
+id="monthlyPayment"
+>
+NT$ 0
+</div>
+
+<div id="detail">
+—
+</div>
+
+</div>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- BASIC ASSESSMENT -->
+
+<!-- ========================================
+基本評估
+======================================== -->
 
 <section id="assessment">
 
-  <div class="container">
+<div class="container">
 
 
-    <div class="section-title">
+<div class="section-title">
 
-      <small>QUICK ASSESSMENT</small>
+<small>
+QUICK ASSESSMENT
+</small>
 
-      <h2>60 秒基本評估</h2>
+<h2>
+60 秒基本評估
+</h2>
 
-      <p>
-        填寫以下基本資料，
-        方便先了解您的資金需求與基本條件。
-      </p>
+<p>
+填寫以下基本資料，
+資料送出後會直接寄至安心借的諮詢信箱。
+</p>
 
-    </div>
+</div>
 
 
-    <div class="formwrap">
 
-      <form
-        class="assessment-form"
-        id="assessmentForm"
-      >
+<div class="form-box">
 
 
-        <!-- 姓名 -->
+<form
+class="assessment-form"
+action="https://formsubmit.co/qwe0916227109@gmail.com"
+method="POST"
+>
 
-        <div class="form-item">
 
-          <label for="name">
-            姓名
-          </label>
+<!-- FormSubmit 設定 -->
 
-          <input
-            id="name"
-            type="text"
-            placeholder="請輸入姓名"
-            required
-          >
+<input
+type="hidden"
+name="_subject"
+value="【安心借】新的基本評估資料"
+>
 
-        </div>
+<input
+type="hidden"
+name="_template"
+value="table"
+>
 
+<input
+type="hidden"
+name="_captcha"
+value="true"
+>
 
-        <!-- 手機 -->
+<input
+type="hidden"
+name="_next"
+value="https://qwe0916227109-prog.github.io/anxinloan/?submitted=1"
+>
 
-        <div class="form-item">
+<input
+type="text"
+name="_honey"
+style="display:none"
+>
 
-          <label for="phone">
-            手機
-          </label>
 
-          <input
-            id="phone"
-            type="tel"
-            inputmode="tel"
-            placeholder="例如：09xxxxxxxx"
-            required
-          >
+<!-- 姓名 -->
 
-        </div>
+<div class="form-item">
 
+<label>
+姓名
+</label>
 
-        <!-- 職業 -->
+<input
+type="text"
+name="姓名"
+placeholder="請輸入姓名"
+required
+>
 
-        <div class="form-item">
+</div>
 
-          <label for="job">
-            職業
-          </label>
 
-          <input
-            id="job"
-            type="text"
-            placeholder="例如：上班族、服務業、自營"
-            required
-          >
 
-        </div>
+<!-- 手機 -->
 
+<div class="form-item">
 
-        <!-- 月收入 -->
+<label>
+手機
+</label>
 
-        <div class="form-item">
+<input
+type="tel"
+name="手機"
+inputmode="tel"
+placeholder="例如：09xxxxxxxx"
+required
+>
 
-          <label for="income">
-            月收入
-          </label>
+</div>
 
-          <select
-            id="income"
-            required
-          >
 
-            <option value="">
-              請選擇
-            </option>
 
-            <option>
-              3 萬元以下
-            </option>
+<!-- 職業 -->
 
-            <option>
-              3 萬～4 萬元
-            </option>
+<div class="form-item">
 
-            <option>
-              4 萬～5 萬元
-            </option>
+<label>
+職業
+</label>
 
-            <option>
-              5 萬～7 萬元
-            </option>
+<input
+type="text"
+name="職業"
+placeholder="例如：上班族／服務業／自營"
+required
+>
 
-            <option>
-              7 萬元以上
-            </option>
+</div>
 
-          </select>
 
-        </div>
 
+<!-- 月收入 -->
 
-        <!-- 需求金額 -->
+<div class="form-item">
 
-        <div class="form-item">
+<label>
+月收入
+</label>
 
-          <label for="needAmount">
-            需求金額
-          </label>
+<select
+name="月收入"
+required
+>
 
-          <select
-            id="needAmount"
-            required
-          >
+<option value="">
+請選擇
+</option>
 
-            <option value="">
-              請選擇
-            </option>
+<option>
+3 萬元以下
+</option>
 
-            <option>
-              1 萬～3 萬元
-            </option>
+<option>
+3 萬～4 萬元
+</option>
 
-            <option>
-              3 萬～5 萬元
-            </option>
+<option>
+4 萬～5 萬元
+</option>
 
-            <option>
-              5 萬～10 萬元
-            </option>
+<option>
+5 萬～7 萬元
+</option>
 
-            <option>
-              10 萬～20 萬元
-            </option>
+<option>
+7 萬元以上
+</option>
 
-            <option>
-              20 萬～30 萬元
-            </option>
+</select>
 
-            <option>
-              30 萬元以上
-            </option>
+</div>
 
-          </select>
 
-        </div>
 
+<!-- 需求金額 -->
 
-        <!-- 類型 -->
+<div class="form-item">
 
-        <div class="form-item">
+<label>
+需求金額
+</label>
 
-          <label for="loanType">
-            需求類型
-          </label>
+<select
+name="需求金額"
+required
+>
 
-          <select
-            id="loanType"
-            required
-          >
+<option value="">
+請選擇
+</option>
 
-            <option value="">
-              請選擇
-            </option>
+<option>
+1 萬～3 萬元
+</option>
 
-            <option>
-              汽車
-            </option>
+<option>
+3 萬～5 萬元
+</option>
 
-            <option>
-              機車
-            </option>
+<option>
+5 萬～10 萬元
+</option>
 
-            <option>
-              雙證件
-            </option>
+<option>
+10 萬～20 萬元
+</option>
 
-            <option>
-              個人週轉
-            </option>
+<option>
+20 萬～30 萬元
+</option>
 
-          </select>
+<option>
+30 萬～50 萬元
+</option>
 
-        </div>
+<option>
+50 萬元以上
+</option>
 
+</select>
 
-        <!-- 薪轉 -->
+</div>
 
-        <div class="form-item">
 
-          <label for="salaryTransfer">
-            是否有薪轉
-          </label>
 
-          <select
-            id="salaryTransfer"
-            required
-          >
+<!-- 需求類型 -->
 
-            <option value="">
-              請選擇
-            </option>
+<div class="form-item">
 
-            <option>
-              有
-            </option>
+<label>
+需求類型
+</label>
 
-            <option>
-              沒有
-            </option>
+<select
+name="需求類型"
+required
+>
 
-          </select>
+<option value="">
+請選擇
+</option>
 
-        </div>
+<option>
+汽車
+</option>
 
+<option>
+機車
+</option>
 
-        <!-- 勞保 -->
+<option>
+雙證件
+</option>
 
-        <div class="form-item">
+<option>
+個人週轉
+</option>
 
-          <label for="laborInsurance">
-            是否有勞保
-          </label>
+</select>
 
-          <select
-            id="laborInsurance"
-            required
-          >
+</div>
 
-            <option value="">
-              請選擇
-            </option>
 
-            <option>
-              有
-            </option>
 
-            <option>
-              沒有
-            </option>
+<!-- 薪轉 -->
 
-          </select>
+<div class="form-item">
 
-        </div>
+<label>
+是否有薪轉
+</label>
 
+<select
+name="是否有薪轉"
+required
+>
 
-        <!-- 貸款 -->
+<option value="">
+請選擇
+</option>
 
-        <div class="form-item">
+<option>
+有
+</option>
 
-          <label for="existingLoan">
-            目前是否有貸款
-          </label>
+<option>
+沒有
+</option>
 
-          <select
-            id="existingLoan"
-            required
-          >
+</select>
 
-            <option value="">
-              請選擇
-            </option>
+</div>
 
-            <option>
-              沒有
-            </option>
 
-            <option>
-              有，目前正常繳款
-            </option>
 
-            <option>
-              有，目前繳款壓力較大
-            </option>
+<!-- 勞保 -->
 
-          </select>
+<div class="form-item">
 
-        </div>
+<label>
+是否有勞保
+</label>
 
+<select
+name="是否有勞保"
+required
+>
 
-        <!-- 聯絡時間 -->
+<option value="">
+請選擇
+</option>
 
-        <div class="form-item">
+<option>
+有
+</option>
 
-          <label for="contactTime">
-            希望聯絡時間
-          </label>
+<option>
+沒有
+</option>
 
-          <select
-            id="contactTime"
-            required
-          >
+</select>
 
-            <option value="">
-              請選擇
-            </option>
+</div>
 
-            <option>
-              上午 09:00～12:00
-            </option>
 
-            <option>
-              下午 12:00～18:00
-            </option>
 
-            <option>
-              晚上 18:00～21:00
-            </option>
+<!-- 現有貸款 -->
 
-            <option>
-              皆可
-            </option>
+<div class="form-item">
 
-          </select>
+<label>
+目前是否有貸款
+</label>
 
-        </div>
+<select
+name="目前是否有貸款"
+required
+>
 
+<option value="">
+請選擇
+</option>
 
-        <!-- LINE -->
+<option>
+沒有
+</option>
 
-        <div class="form-item full">
+<option>
+有，目前正常繳款
+</option>
 
-          <label for="customerLine">
-            LINE
-          </label>
+<option>
+有，目前繳款壓力較大
+</option>
 
-          <input
-            id="customerLine"
-            type="text"
-            placeholder="請輸入您的 LINE ID（沒有可留空）"
-          >
+</select>
 
-        </div>
+</div>
 
 
-        <!-- 個資同意 -->
 
-        <div class="form-item full">
+<!-- 聯絡時間 -->
 
-          <label class="agree">
+<div class="form-item">
 
-            <input
-              id="agree"
-              type="checkbox"
-              required
-            >
+<label>
+希望聯絡時間
+</label>
 
-            <span>
-              我同意為本次資金諮詢、聯絡及基本評估目的，
-              提供並使用以上資料。
-            </span>
+<select
+name="希望聯絡時間"
+required
+>
 
-          </label>
+<option value="">
+請選擇
+</option>
 
+<option>
+上午 09:00～12:00
+</option>
 
-          <button
-            class="assessment-submit"
-            type="submit"
-          >
-            送出基本評估
-          </button>
+<option>
+下午 12:00～18:00
+</option>
 
+<option>
+晚上 18:00～21:00
+</option>
 
-          <p class="assessment-note">
-            ※ 填寫資料不代表核准、保證額度或保證取得資金。
-            實際方案、利率、費用與條件依正式審核結果為準。
-          </p>
+<option>
+皆可
+</option>
 
-        </div>
+</select>
 
+</div>
 
-      </form>
 
-    </div>
 
-  </div>
+<!-- LINE -->
+
+<div class="form-item full">
+
+<label>
+LINE
+</label>
+
+<input
+type="text"
+name="LINE"
+placeholder="請輸入您的 LINE ID（沒有可留空）"
+>
+
+</div>
+
+
+
+<!-- 同意 -->
+
+<div class="form-item full">
+
+
+<label class="agree">
+
+<input
+type="checkbox"
+name="個資蒐集同意"
+value="已同意"
+required
+>
+
+<span>
+我同意安心借為本次資金諮詢、
+聯絡及基本評估目的，
+蒐集並使用以上資料。
+</span>
+
+</label>
+
+
+
+<button
+class="submit-btn"
+type="submit"
+>
+送出基本評估
+</button>
+
+
+<p class="form-note">
+※ 填寫資料不代表核准或保證額度。
+實際方案、利率、費用與相關條件，
+依正式審核與契約內容為準。
+</p>
+
+
+</div>
+
+
+</form>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FAQ -->
 
-<section id="faq">
+<!-- ========================================
+FAQ
+======================================== -->
 
-  <div class="container">
+<section>
 
-    <div class="section-title">
-
-      <small>FAQ</small>
-
-      <h2>常見問題</h2>
-
-    </div>
+<div class="container">
 
 
-    <div class="faq-list">
+<div class="section-title">
+
+<small>
+FAQ
+</small>
+
+<h2>
+常見問題
+</h2>
+
+</div>
 
 
-      <details>
-
-        <summary>
-          只是先詢問，也可以嗎？
-        </summary>
-
-        <p>
-          可以。可以先說明目前需求與基本條件，
-          了解方向後再決定是否繼續。
-        </p>
-
-      </details>
+<div class="faq">
 
 
-      <details>
+<details>
 
-        <summary>
-          沒有汽車或機車也能詢問嗎？
-        </summary>
+<summary>
+只是先詢問，也可以嗎？
+</summary>
 
-        <p>
-          可以，可依工作、收入及其他基本條件，
-          了解是否有其他適合的方案。
-        </p>
+<p>
+可以。先了解目前需求與基本條件，
+再決定是否進一步辦理。
+</p>
 
-      </details>
-
-
-      <details>
-
-        <summary>
-          試算的月付就是最後繳款金額嗎？
-        </summary>
-
-        <p>
-          不是。網站試算僅供初步參考，
-          實際金額、利率、期數與相關費用，
-          仍依正式方案與審核結果為準。
-        </p>
-
-      </details>
+</details>
 
 
-      <details>
 
-        <summary>
-          填完基本評估就一定會核准嗎？
-        </summary>
+<details>
 
-        <p>
-          不會。基本評估主要用於了解需求，
-          不代表核准或保證任何額度。
-        </p>
+<summary>
+沒有汽車或機車也可以詢問嗎？
+</summary>
 
-      </details>
+<p>
+可以。
+可以依工作、收入及其他實際條件，
+了解雙證件或個人週轉方向。
+</p>
+
+</details>
 
 
-    </div>
 
-  </div>
+<details>
+
+<summary>
+汽車或機車還有貸款可以詢問嗎？
+</summary>
+
+<p>
+可以先提供目前車況與貸款狀況，
+再依個別條件了解可行方向。
+</p>
+
+</details>
+
+
+
+<details>
+
+<summary>
+網站試算就是最後月付嗎？
+</summary>
+
+<p>
+不是。
+網站試算僅供初步參考，
+實際月付仍依正式利率、期數及方案為準。
+</p>
+
+</details>
+
+
+
+<details>
+
+<summary>
+填寫基本評估就一定核准嗎？
+</summary>
+
+<p>
+不一定。
+基本評估僅供了解需求及條件，
+不代表保證核准或保證額度。
+</p>
+
+</details>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- CTA -->
+
+<!-- ========================================
+CTA
+======================================== -->
 
 <section class="cta">
 
-  <div class="container">
+<div class="container">
 
-    <div class="cta-box">
+<div class="cta-box">
 
-      <div class="eyebrow">
-        ONLINE CONSULTING
-      </div>
 
-      <h2>
-        有資金需求？
-      </h2>
+<div class="kicker">
+ONLINE CONSULTING
+</div>
 
-      <p>
-        不確定自己適合哪一種方式，
-        可以先填寫基本評估，
-        或直接 LINE 說明目前情況。
-      </p>
+<h2>
+有資金需求？
+</h2>
 
-      <a
-        class="gold-btn"
-        href="https://line.me/ti/p/~xd5567"
-        target="_blank"
-      >
-        LINE 找文林諮詢
-      </a>
+<p>
+可以先填寫基本評估，
+也可以直接透過 LINE 說明目前情況。
+</p>
 
-    </div>
 
-  </div>
+<a
+class="gold-btn"
+href="https://line.me/ti/p/~xd5567"
+target="_blank"
+rel="noopener"
+>
+LINE 找文林諮詢
+</a>
+
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
+
+<!-- ========================================
+Footer
+======================================== -->
 
 <footer>
 
-  <div class="container footer-inner">
+<div class="container">
 
-    <div>
+<div class="footer-title">
+安心借｜資金規劃
+</div>
 
-      <div class="footer-title">
-        安心借｜資金規劃
-      </div>
+<p>
+LINE：xd5567
+</p>
 
-      <p>
-        網站內容僅供借貸資訊與諮詢參考，
-        實際申請資格、額度、利率、期數及費用
-        依個別案件與正式審核結果為準。
-      </p>
+<br>
 
-    </div>
+<p>
+網站內容僅供借貸資訊與諮詢參考。
+實際申請資格、額度、利率、期數、
+相關費用及還款方式，
+依個別案件與正式審核結果為準。
+</p>
 
-    <div>
+<br>
 
-      <div class="footer-title">
-        聯絡方式
-      </div>
+<p>
+© 2026 安心借
+</p>
 
-      <p>
-        LINE：xd5567
-      </p>
-
-    </div>
-
-  </div>
+</div>
 
 </footer>
 
 
-<!-- FLOATING LINE -->
+
+<!-- LINE 浮動 -->
 
 <a
-  class="floating-line"
-  href="https://line.me/ti/p/~xd5567"
-  target="_blank"
+class="line-float"
+href="https://line.me/ti/p/~xd5567"
+target="_blank"
+rel="noopener"
 >
-  LINE 諮詢
+LINE 諮詢
 </a>
+
 
 
 <script>
 
-  /* =========================
-     還款試算
-  ========================= */
+/* =========================
+還款試算
+========================= */
 
-  function calculateLoan(){
+function calculateLoan(){
 
-    const amount =
-      Number(
-        document.getElementById("amount").value
-      );
+const amount =
+Number(
+document.getElementById("amount").value
+);
 
-    const months =
-      Number(
-        document.getElementById("months").value
-      );
+const months =
+Number(
+document.getElementById("months").value
+);
 
-    const annualRate =
-      Number(
-        document.getElementById("rate").value
-      );
-
-
-    if(
-      !amount ||
-      !months ||
-      annualRate < 0
-    ){
-      return;
-    }
+const annualRate =
+Number(
+document.getElementById("rate").value
+);
 
 
-    const monthlyRate =
-      annualRate / 100 / 12;
+if(
+amount <= 0 ||
+months <= 0 ||
+annualRate < 0
+){
+
+document
+.getElementById("monthlyPayment")
+.textContent =
+"請輸入正確資料";
+
+return;
+
+}
 
 
-    let monthlyPayment;
+const monthlyRate =
+annualRate / 100 / 12;
 
 
-    if(monthlyRate === 0){
-
-      monthlyPayment =
-        amount / months;
-
-    }else{
-
-      monthlyPayment =
-        amount *
-        monthlyRate *
-        Math.pow(
-          1 + monthlyRate,
-          months
-        ) /
-        (
-          Math.pow(
-            1 + monthlyRate,
-            months
-          ) - 1
-        );
-
-    }
+let monthlyPayment;
 
 
-    document
-      .getElementById("monthlyPayment")
-      .textContent =
-        "NT$ " +
-        Math.round(monthlyPayment)
-          .toLocaleString("zh-TW");
+if(monthlyRate === 0){
+
+monthlyPayment =
+amount / months;
+
+}else{
+
+monthlyPayment =
+amount *
+monthlyRate *
+Math.pow(
+1 + monthlyRate,
+months
+) /
+(
+Math.pow(
+1 + monthlyRate,
+months
+) - 1
+);
+
+}
 
 
-    document
-      .getElementById("detail")
-      .textContent =
-        "借款 " +
-        amount.toLocaleString("zh-TW") +
-        " 元｜" +
-        months +
-        " 期｜年利率 " +
-        annualRate +
-        "%";
-
-  }
+document
+.getElementById("monthlyPayment")
+.textContent =
+"NT$ " +
+Math.round(monthlyPayment)
+.toLocaleString("zh-TW");
 
 
-  document
-    .getElementById("amount")
-    .addEventListener(
-      "input",
-      calculateLoan
-    );
+document
+.getElementById("detail")
+.textContent =
+"借款 " +
+amount.toLocaleString("zh-TW") +
+" 元｜" +
+months +
+" 期｜年利率 " +
+annualRate +
+"%";
+
+}
 
 
-  document
-    .getElementById("months")
-    .addEventListener(
-      "change",
-      calculateLoan
-    );
+document
+.getElementById("amount")
+.addEventListener(
+"input",
+calculateLoan
+);
 
 
-  document
-    .getElementById("rate")
-    .addEventListener(
-      "input",
-      calculateLoan
-    );
+document
+.getElementById("months")
+.addEventListener(
+"change",
+calculateLoan
+);
 
 
-  calculateLoan();
+document
+.getElementById("rate")
+.addEventListener(
+"input",
+calculateLoan
+);
 
 
-
-  /* =========================
-     基本評估送至 LINE
-  ========================= */
-
-  document
-    .getElementById("assessmentForm")
-    .addEventListener(
-      "submit",
-      function(event){
-
-        event.preventDefault();
+calculateLoan();
 
 
-        const name =
-          document.getElementById("name").value;
+/* =========================
+送出成功提示
+========================= */
 
-        const phone =
-          document.getElementById("phone").value;
-
-        const job =
-          document.getElementById("job").value;
-
-        const income =
-          document.getElementById("income").value;
-
-        const needAmount =
-          document.getElementById("needAmount").value;
-
-        const loanType =
-          document.getElementById("loanType").value;
-
-        const salaryTransfer =
-          document.getElementById("salaryTransfer").value;
-
-        const laborInsurance =
-          document.getElementById("laborInsurance").value;
-
-        const existingLoan =
-          document.getElementById("existingLoan").value;
-
-        const contactTime =
-          document.getElementById("contactTime").value;
-
-        const customerLine =
-          document.getElementById("customerLine").value;
+const params =
+new URLSearchParams(
+window.location.search
+);
 
 
-        const message =
-`您好，我想做基本評估：
+if(
+params.get("submitted") === "1"
+){
 
-姓名：${name}
-手機：${phone}
-職業：${job}
-月收入：${income}
-需求金額：${needAmount}
-需求類型：${loanType}
-是否有薪轉：${salaryTransfer}
-是否有勞保：${laborInsurance}
-目前是否有貸款：${existingLoan}
-希望聯絡時間：${contactTime}
-LINE：${customerLine || "未填寫"}`;
+setTimeout(
+function(){
 
+alert(
+"基本評估資料已送出，我們會依您留下的聯絡方式與您聯繫。"
+);
 
-        const lineUrl =
-          "https://line.me/R/share?text=" +
-          encodeURIComponent(message);
+history.replaceState(
+{},
+"",
+window.location.pathname
+);
 
+},
+300
+);
 
-        window.location.href =
-          lineUrl;
-
-      }
-    );
+}
 
 </script>
 
 
 </body>
-                  </html>
+
+  </html>
